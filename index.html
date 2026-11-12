@@ -1071,7 +1071,16 @@
             google.accounts.id.disableAutoSelect();
             showView('loginView');
         }
-
+function showView(viewId) {
+    // सबै भ्यु (View) लुकाउने
+    document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
+    
+    // जुन भ्यु देखाउनुपर्ने हो, त्यो देखाउने (जस्तै: loginView वा userDashboardView)
+    let targetView = document.getElementById(viewId);
+    if(targetView) {
+        targetView.classList.add('active');
+    }
+}
         // ==========================================
         // ORIGINAL LOGIC (Modified for Drive)
         // ==========================================
