@@ -517,7 +517,6 @@
         <div style="overflow:auto;max-height:75vh;"><table id="namerolReportTable" style="width:100%;border-collapse:collapse;color:#111;background:white;"><thead><tr><th>क्र.सं.</th><th>व्यक्तिगत नम्बर</th><th>दर्जा</th><th>नाम</th><th>ट्रेड</th><th>तह</th><th>दरबन्दि /अट्याचमेन्ट</th><th>मोबाइल नम्बर</th></tr></thead><tbody></tbody></table></div>
       </div>
     </div>
-
     <div id="notesModal" class="modal" style="z-index:3500;padding:12px;">
       <div class="modal-content" style="max-width:850px;max-height:94vh;overflow:auto;">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px;"><h2>Tasks</h2><button class="btn-red" onclick="closeNotesModal()">Close</button></div>
@@ -885,59 +884,120 @@
         <div class="modal-content" style="max-width: 74vw; width: 74vw; padding: 10px; overflow-x: hidden;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 6px;">
                 <h3 id="graphModalTitle" style="color: #0056b3; font-size: 12px; white-space: nowrap; margin: 0;">Graph</h3>
+                
                 <div style="display: flex; gap: 4px; align-items: center; flex-wrap: nowrap; overflow-x: auto; max-width: 88vw; padding-bottom: 4px;">
                     <div>
                         <label style="font-weight:bold; font-size:9px;">दरबन्दि: </label>
                         <select id="graphDarbandiFilter" onchange="updateChartData()" style="padding: 1px; font-size: 9px; height: 22px;">
-                            <option value="all">सबै</option><option value="दरबन्दि">दरबन्दि</option><option value="अट्याच">अट्याच</option>
+                            <option value="all">सबै</option>
+                            <option value="दरबन्दि">दरबन्दि</option>
+                            <option value="अट्याच">अट्याच</option>
                         </select>
                     </div>
                     <div>
                         <label style="font-weight:bold; font-size:9px;">विवरण-१: </label>
                         <select id="graphRemarkFilter1" onchange="updateChartData()" style="padding: 1px; font-size: 9px; height: 22px;">
-                            <option value="all">सबै</option><option value="खडा">खडा</option><option value="बिदा">बिदा</option><option value="काज">काज</option><option value="राते/औट">राते/औट</option><option value="तालिम">तालिम</option><option value="शा.से.">शा.से.</option><option value="बिरामी">बिरामी</option>
+                            <option value="all">सबै</option>
+                            <option value="खडा">खडा</option>
+                            <option value="बिदा">बिदा</option>
+                            <option value="काज">काज</option>
+                            <option value="राते/औट">राते/औट</option>
+                            <option value="तालिम">तालिम</option>
+                            <option value="शा.से.">शा.से.</option>
+                            <option value="बिरामी">बिरामी</option>
                         </select>
                     </div>
                     <div>
                         <label style="font-weight:bold; font-size:9px;">विवरण-२: </label>
                         <select id="graphRemarkFilter2" onchange="updateChartData()" style="padding: 1px; font-size: 9px; height: 22px;">
-                            <option value="none">(कुनै)</option><option value="खडा">खडा</option><option value="बिदा">बिदा</option><option value="काज">काज</option><option value="राते/औट">राते/औट</option><option value="तालिम">तालिम</option><option value="शा.से.">शा.से.</option><option value="बिरामी">बिरामी</option>
+                            <option value="none">(कुनै)</option>
+                            <option value="खडा">खडा</option>
+                            <option value="बिदा">बिदा</option>
+                            <option value="काज">काज</option>
+                            <option value="राते/औट">राते/औट</option>
+                            <option value="तालिम">तालिम</option>
+                            <option value="शा.से.">शा.से.</option>
+                            <option value="बिरामी">बिरामी</option>
                         </select>
                     </div>
                     <div>
                         <label style="font-weight:bold; font-size:9px;">विवरण-३: </label>
                         <select id="graphRemarkFilter3" onchange="updateChartData()" style="padding: 1px; font-size: 9px; height: 22px;">
-                            <option value="none">(कुनै)</option><option value="खडा">खडा</option><option value="बिदा">बिदा</option><option value="काज">काज</option><option value="राते/औट">राते/औट</option><option value="तालिम">तालिम</option><option value="शा.से.">शा.से.</option><option value="बिरामी">बिरामी</option>
+                            <option value="none">(कुनै)</option>
+                            <option value="खडा">खडा</option>
+                            <option value="बिदा">बिदा</option>
+                            <option value="काज">काज</option>
+                            <option value="राते/औट">राते/औट</option>
+                            <option value="तालिम">तालिम</option>
+                            <option value="शा.से.">शा.से.</option>
+                            <option value="बिरामी">बिरामी</option>
                         </select>
                     </div>
                     <div>
                         <label style="font-weight:bold; font-size:9px;">विवरण-४: </label>
                         <select id="graphRemarkFilter4" onchange="updateChartData()" style="padding: 1px; font-size: 9px; height: 22px;">
-                            <option value="none">(कुनै)</option><option value="खडा">खडा</option><option value="बिदा">बिदा</option><option value="काज">काज</option><option value="राते/औट">राते/औट</option><option value="तालिम">तालिम</option><option value="शा.से.">शा.से.</option><option value="बिरामी">बिरामी</option>
+                            <option value="none">(कुनै)</option>
+                            <option value="खडा">खडा</option>
+                            <option value="बिदा">बिदा</option>
+                            <option value="काज">काज</option>
+                            <option value="राते/औट">राते/औट</option>
+                            <option value="तालिम">तालिम</option>
+                            <option value="शा.से.">शा.से.</option>
+                            <option value="बिरामी">बिरामी</option>
                         </select>
                     </div>
                     <div>
                         <label style="font-weight:bold; font-size:9px;">विवरण-५: </label>
                         <select id="graphRemarkFilter5" onchange="updateChartData()" style="padding: 1px; font-size: 9px; height: 22px;">
-                            <option value="none">(कुनै)</option><option value="खडा">खडा</option><option value="बिदा">बिदा</option><option value="काज">काज</option><option value="राते/औट">राते/औट</option><option value="तालिम">तालिम</option><option value="शा.से.">शा.से.</option><option value="बिरामी">बिरामी</option>
+                            <option value="none">(कुनै)</option>
+                            <option value="खडा">खडा</option>
+                            <option value="बिदा">बिदा</option>
+                            <option value="काज">काज</option>
+                            <option value="राते/औट">राते/औट</option>
+                            <option value="तालिम">तालिम</option>
+                            <option value="शा.से.">शा.से.</option>
+                            <option value="बिरामी">बिरामी</option>
                         </select>
                     </div>
                     <div>
                         <label style="font-weight:bold; font-size:9px;">विवरण-६: </label>
                         <select id="graphRemarkFilter6" onchange="updateChartData()" style="padding: 1px; font-size: 9px; height: 22px;">
-                            <option value="none">(कुनै)</option><option value="खडा">खडा</option><option value="बिदा">बिदा</option><option value="काज">काज</option><option value="राते/औट">राते/औट</option><option value="तालिम">तालिम</option><option value="शा.से.">शा.से.</option><option value="बिरामी">बिरामी</option>
+                            <option value="none">(कुनै)</option>
+                            <option value="खडा">खडा</option>
+                            <option value="बिदा">बिदा</option>
+                            <option value="काज">काज</option>
+                            <option value="राते/औट">राते/औट</option>
+                            <option value="तालिम">तालिम</option>
+                            <option value="शा.से.">शा.से.</option>
+                            <option value="बिरामी">बिरामी</option>
                         </select>
                     </div>
                     <div>
                         <label style="font-weight:bold; font-size:9px;">विवरण-७: </label>
                         <select id="graphRemarkFilter7" onchange="updateChartData()" style="padding: 1px; font-size: 9px; height: 22px;">
-                            <option value="none">(कुनै)</option><option value="खडा">खडा</option><option value="बिदा">बिदा</option><option value="काज">काज</option><option value="राते/औट">राते/औट</option><option value="तालिम">तालिम</option><option value="शा.से.">शा.से.</option><option value="बिरामी">बिरामी</option>
+                            <option value="none">(कुनै)</option>
+                            <option value="खडा">खडा</option>
+                            <option value="बिदा">बिदा</option>
+                            <option value="काज">काज</option>
+                            <option value="राते/औट">राते/औट</option>
+                            <option value="तालिम">तालिम</option>
+                            <option value="शा.से.">शा.से.</option>
+                            <option value="बिरामी">बिरामी</option>
                         </select>
                     </div>
                     <div>
                         <label style="font-weight:bold; font-size:9px;">ट्रेड: </label>
                         <select id="graphTradeFilter" onchange="updateChartData()" style="padding: 1px; font-size: 9px; height: 22px;">
-                            <option value="all">सबै</option><option value="AM">AM</option><option value="RM">RM</option><option value="VM">VM</option><option value="GM">GM</option><option value="GF">GF</option><option value="IM">IM</option><option value="Gen">Gen</option><option value="AC">AC</option><option value="HQ">HQ</option>
+                            <option value="all">सबै</option>
+                            <option value="AM">AM</option>
+                            <option value="RM">RM</option>
+                            <option value="VM">VM</option>
+                            <option value="GM">GM</option>
+                            <option value="GF">GF</option>
+                            <option value="IM">IM</option>
+                            <option value="Gen">Gen</option>
+                            <option value="AC">AC</option>
+                            <option value="HQ">HQ</option>
                         </select>
                     </div>
                 </div>
@@ -969,9 +1029,9 @@
 
     <script>
         // ==========================================
-        // GOOGLE DRIVE DATA INTEGRATION (REPLACES LOCALSTORAGE)
+        // GOOGLE DRIVE DATA INTEGRATION
         // ==========================================
-        const GAS_URL = "https://script.google.com/macros/s/AKfycby4MaBLuhMM8bdwsVZMgzLSjt0E7wnJQjLbsVL2D8_vLt5yV1SNo64hQvb1fAUycjqA/exec"; 
+        const GAS_URL = "https://script.google.com/macros/s/AKfycbwYBJsQPm-qQf-q131ATDL1U7iABbLLk0D8ZQ2in1zYn54vYdhf3oaDDR1Y3CSpd496/exec"; 
         let currentIdToken = "";
         let currentUserRole = "";
 
@@ -989,14 +1049,14 @@
                     if (data.role === 'admin') {
                         currentActiveUser = { username: data.email, unit: 'admin' };
                         showView('adminView');
+                        renderAdminTables();
                     } else {
-                        // युजरको Unit थाहा पाउन, हामी डेटा लोड गरेपछि उसको इमेलबाट युनिट खोज्नेछौं
                         currentActiveUser = { username: data.email, unit: 'Loading...' }; 
-                        showView('userDashboardView');
+                        showView('unitDashboardView');
                     }
                     loadDataFromDrive();
                 } else if (data.status === 'pending') {
-                    alert("तपाईंको खाता अझै Admin द्वारा Approved भएको छैन। कृपया पर्खनुहोस्।");
+                    alert("तपाईंको खाता अझै Admin द्वारा Approved भएको छैन।");
                 } else {
                     alert("लगइन असफल: " + data.message);
                 }
@@ -1026,14 +1086,12 @@
                     appointments = d.appointments || [];
                     
                     if (currentUserRole === 'user') {
-                        // युजरको इमेललाई युनिटमा म्याप गर्ने (तपाईंले Admin प्यानलमा इमेल र युनिट जोड्ने फिचर राख्नुपर्छ)
                         let matchedUser = users.find(u => u.username === currentActiveUser.username);
-                        if(matchedUser) {
-                            currentActiveUser.unit = matchedUser.unit;
-                        } else {
-                            currentActiveUser.unit = units.length > 0 ? units[0] : 'Unknown Unit'; // Fallback
-                        }
+                        if(matchedUser) currentActiveUser.unit = matchedUser.unit;
+                        else currentActiveUser.unit = units.length > 0 ? units[0] : 'Unknown Unit';
+                        
                         document.getElementById('currentUnitTitle').innerText = currentActiveUser.unit;
+                        updateAssignUnitDropdown();
                         renderUnitDashboard(currentActiveUser.unit, true);
                         renderEmployeeTable();
                     } else {
@@ -1044,7 +1102,7 @@
         }
 
         function saveDataToStorage() {
-            if (!currentIdToken) return;
+            if (!currentIdToken) return; 
             const appData = {
                 units, unitLogos, unitParents, requiredStrength, rankRequiredStrength, 
                 darbandiCharts, users, employees, history: attendanceHistory, appointments
@@ -1057,9 +1115,7 @@
             })
             .then(res => res.json())
             .then(resData => {
-                if (resData.status !== 'success') {
-                    console.error("Drive Save Error: " + resData.message);
-                }
+                if (resData.status !== 'success') console.error("Drive Save Error: " + resData.message);
             })
             .catch(err => console.error("Drive Save Fetch Error: ", err));
         }
@@ -1068,19 +1124,10 @@
             currentIdToken = "";
             currentUserRole = "";
             currentActiveUser = null;
-            google.accounts.id.disableAutoSelect();
+            if (google && google.accounts) google.accounts.id.disableAutoSelect();
             showView('loginView');
         }
-function showView(viewId) {
-    // सबै भ्यु (View) लुकाउने
-    document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
-    
-    // जुन भ्यु देखाउनुपर्ने हो, त्यो देखाउने (जस्तै: loginView वा userDashboardView)
-    let targetView = document.getElementById(viewId);
-    if(targetView) {
-        targetView.classList.add('active');
-    }
-}
+
         // ==========================================
         // ORIGINAL LOGIC (Modified for Drive)
         // ==========================================
@@ -1182,16 +1229,1991 @@ function showView(viewId) {
         }
 
         function normalizeUnitName(name) { return (name || '').replace(/\s+/g,'').replace(/[.।]/g,'').toLowerCase(); }
-        function ensureKnownUnitParents() { /* ... (तपाईंको पुरानो कोड जस्तै) ... */ }
+        function ensureKnownUnitParents() {
+            if (!unitParents || typeof unitParents !== 'object') unitParents = {};
+            let parent = units.find(u => normalizeUnitName(u).includes('मध्यपृतना') && normalizeUnitName(u).includes('ईएमईगण'));
+            if (!parent) parent = units.find(u => normalizeUnitName(u).includes('मध्यपृतना'));
+            if (!parent) return;
+            units.forEach(u => {
+                let n = normalizeUnitName(u);
+                if (!(u in unitParents) && (n.includes('६बाहिनीकारखाना') || n.includes('6बाहिनीकारखाना') || n.includes('६बाहिनी'))) unitParents[u] = parent;
+                if (!(u in unitParents) && (n.includes('७बाहिनीकारखाना') || n.includes('7बाहिनीकारखाना') || n.includes('७बाहिनी'))) unitParents[u] = parent;
+            });
+        }
         function getSubUnits(unit) { return units.filter(u => unitParents[u] === unit); }
-        function getDescendantUnits(unit) { let out=[]; let queue=[unit]; while(queue.length){ let p=queue.shift(); getSubUnits(p).forEach(c=>{ if(!out.includes(c)){out.push(c);queue.push(c);} }); } return out; }
+        function getDescendantUnits(unit) {
+            let out=[]; let queue=[unit];
+            while(queue.length){ let p=queue.shift(); getSubUnits(p).forEach(c=>{ if(!out.includes(c)){out.push(c);queue.push(c);} }); }
+            return out;
+        }
+        function setUnitParent(unit, parent) {
+            if (parent === unit) parent = '';
+            if (parent && getDescendantUnits(unit).includes(parent)) { alert('यो Parent Unit राख्दा circular Sub Unit सम्बन्ध बन्छ।'); renderAdminTables(); return; }
+            if (parent) unitParents[unit] = parent; else delete unitParents[unit];
+            saveDataToStorage();
+            renderAdminTables();
+        }
+        function getDarbandiChartKey(unit, includeDescendants=false) { return includeDescendants ? (unit + '::__ALL__') : unit; }
+        function getDarbandiChartLabel(unit, includeDescendants=false) { return includeDescendants ? (unit + ' (अन्तर्गत सहित)') : unit; }
         
+        function populateDarbandiChartUnits() {
+            const sel = document.getElementById('darbandiChartUnit');
+            if (!sel) return;
+            const current = sel.value;
+            let opts = '<option value="">Dashboard/Unit छान्नुहोस्...</option>';
+            units.forEach(u=>{
+                const hasChildren = getDescendantUnits(u).length > 0;
+                if (hasChildren) opts += `<option value="${escapeHtml(getDarbandiChartKey(u,true))}">${escapeHtml(getDarbandiChartLabel(u,true))}</option>`;
+                opts += `<option value="${escapeHtml(getDarbandiChartKey(u,false))}">${escapeHtml(u)}</option>`;
+            });
+            sel.innerHTML = opts;
+            const preferred = current && (units.includes(current) || current.endsWith('::__ALL__')) ? current : '';
+            if (preferred) sel.value = preferred;
+            else if (currentActiveUser && currentActiveUser.unit !== 'admin' && units.includes(currentActiveUser.unit)) sel.value = currentActiveUser.unit;
+            loadDarbandiChartPreview();
+        }
+        function toggleDarbandiChartManager() {
+            const el=document.getElementById('darbandiChartManager');
+            if(!el) return;
+            const open=el.style.display==='none' || el.style.display==='';
+            el.style.display=open?'block':'none';
+            if(open) populateDarbandiChartUnits();
+        }
+        function parseDarbandiChartSelection(selection) {
+            const v = selection || '';
+            const isAll = v.endsWith('::__ALL__');
+            return { key:v, unit:isAll ? v.slice(0,-9) : v, includeDescendants:isAll };
+        }
+        function normalizeDarbandiChartEntry(entry){
+            if(!entry) return null;
+            if(typeof entry === 'string') return {type:'image', data:entry};
+            if(entry && entry.data) return {type:entry.type || 'image', data:entry.data};
+            return null;
+        }
+        function loadDarbandiChartPreview() {
+            const selection=document.getElementById('darbandiChartUnit')?.value||'';
+            const box=document.getElementById('darbandiChartAdminPreview');
+            if(!box) return;
+            const info=parseDarbandiChartSelection(selection);
+            const entry=normalizeDarbandiChartEntry(darbandiCharts[info.key]);
+            if(!entry){ box.innerHTML='Chart छैन'; return; }
+            if(entry.type==='pdf'){
+                box.innerHTML=`<div style="padding:8px;border:1px solid #bbb;background:#fff;">📄 PDF Organization Chart उपलब्ध छ</div><div style="margin-top:2px;">${escapeHtml(getDarbandiChartLabel(info.unit,info.includeDescendants))}</div>`;
+            } else {
+                box.innerHTML=`<img src="${entry.data}" style="max-width:100%;max-height:110px;object-fit:contain;border:1px solid #bbb;"><div style="margin-top:2px;">${escapeHtml(getDarbandiChartLabel(info.unit,info.includeDescendants))} को Image Chart उपलब्ध छ</div>`;
+            }
+        }
+        function readFileAsDataUrl(file, callback){
+            const reader=new FileReader();
+            reader.onload=e=>callback(e.target.result);
+            reader.onerror=()=>alert('File पढ्न सकिएन।');
+            reader.readAsDataURL(file);
+        }
+        function compressChartImage(file, callback) {
+            const reader=new FileReader();
+            reader.onload=function(e){
+                const img=new Image();
+                img.onload=function(){
+                    const maxW=5000,maxH=5000;
+                    const scale=Math.min(1,maxW/img.width,maxH/img.height);
+                    const canvas=document.createElement('canvas');
+                    canvas.width=Math.max(1,Math.round(img.width*scale));
+                    canvas.height=Math.max(1,Math.round(img.height*scale));
+                    const ctx=canvas.getContext('2d');
+                    ctx.fillStyle='#fff'; ctx.fillRect(0,0,canvas.width,canvas.height);
+                    ctx.imageSmoothingEnabled=false;
+                    ctx.drawImage(img,0,0,canvas.width,canvas.height);
+                    callback(canvas.toDataURL('image/png'));
+                };
+                img.onerror=function(){ alert('Image पढ्न सकिएन।'); };
+                img.src=e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+        function uploadDarbandiChart() {
+            const selection=document.getElementById('darbandiChartUnit')?.value||'';
+            const file=document.getElementById('darbandiChartFile')?.files?.[0];
+            if(!selection){ alert('पहिला Dashboard/Unit छान्नुहोस्!'); return; }
+            if(!file){ alert('पहिला chart image वा PDF छान्नुहोस्!'); return; }
+            const info=parseDarbandiChartSelection(selection);
+            const isPdf = file.type === 'application/pdf' || /\.pdf$/i.test(file.name);
+            const saveEntry = (type,dataUrl) => {
+                try {
+                    darbandiCharts[info.key]={type:type,data:dataUrl,name:file.name};
+                    saveDataToStorage();
+                    loadDarbandiChartPreview();
+                    alert(`${getDarbandiChartLabel(info.unit,info.includeDescendants)} को Organization Chart सुरक्षित भयो।`);
+                } catch(err) {
+                    alert('यो file धेरै ठूलो भएकाले browser storage मा save गर्न सकिएन। सानो PDF/Image प्रयोग गर्नुहोस्।');
+                }
+            };
+            if(isPdf){
+                readFileAsDataUrl(file,dataUrl=>saveEntry('pdf',dataUrl));
+            } else {
+                compressChartImage(file,dataUrl=>saveEntry('image',dataUrl));
+            }
+        }
+        function deleteDarbandiChart() {
+            const selection=document.getElementById('darbandiChartUnit')?.value||'';
+            if(!selection){ alert('पहिला Dashboard/Unit छान्नुहोस्!'); return; }
+            const info=parseDarbandiChartSelection(selection);
+            if(!darbandiCharts[info.key]){ alert('यस Dashboard को chart छैन।'); return; }
+            if(!confirm(`${getDarbandiChartLabel(info.unit,info.includeDescendants)} को Organization Chart हटाउने?`)) return;
+            delete darbandiCharts[info.key]; saveDataToStorage(); loadDarbandiChartPreview();
+        }
+        function openDarbandiChart(unitOverride, includeDescendants=false) {
+            let unit = unitOverride || (currentActiveUser && currentActiveUser.unit !== 'admin' ? currentActiveUser.unit : '');
+            if(!unit) return;
+            const hasDesc = getDescendantUnits(unit).length > 0;
+            const useAll = !!includeDescendants && hasDesc;
+            const key = getDarbandiChartKey(unit, useAll);
+            document.getElementById('darbandiChartModalTitle').innerText = getDarbandiChartLabel(unit,useAll) + ' — Organization Chart';
+            const img=document.getElementById('darbandiChartImage'), pdf=document.getElementById('darbandiChartPdf'), empty=document.getElementById('darbandiChartEmpty');
+            const entry=normalizeDarbandiChartEntry(darbandiCharts[key]);
+            img.style.display='none'; pdf.style.display='none'; empty.style.display='none';
+            if(entry && entry.type==='pdf'){
+                pdf.src=entry.data; pdf.style.display='block';
+            } else if(entry){
+                img.src=entry.data; img.style.display='block'; img.style.transform='scale(1)';
+            } else {
+                empty.style.display='block';
+            }
+            document.getElementById('darbandiChartModal').style.display='flex';
+        }
+        function viewSelectedDarbandiChart(){
+            const selection=document.getElementById('darbandiChartUnit')?.value||'';
+            if(!selection){ alert('पहिला Dashboard/Unit छान्नुहोस्!'); return; }
+            const info=parseDarbandiChartSelection(selection);
+            openDarbandiChart(info.unit, info.includeDescendants);
+        }
+        function setDarbandiChartZoom(scale){
+            const img=document.getElementById('darbandiChartImage');
+            if(img && img.style.display!=='none') img.style.transform = `scale(${Number(scale)||1})`;
+        }
+        function closeDarbandiChart(){
+            const img=document.getElementById('darbandiChartImage'), pdf=document.getElementById('darbandiChartPdf');
+            if(img) { img.style.transform='scale(1)'; img.removeAttribute('src'); }
+            if(pdf) { pdf.removeAttribute('src'); pdf.style.display='none'; }
+            document.getElementById('darbandiChartModal').style.display='none';
+        }
+
+        function openWorkView() {
+            if (!currentActiveUser || currentActiveUser.unit === 'admin') return;
+            document.getElementById('currentUnitTitle').innerText = currentActiveUser.unit;
+            document.getElementById('userInfoDisplay').innerText = `User: ${currentActiveUser.username}`;
+            updateAssignUnitDropdown(); renderEmployeeTable(); showView('userDashboardView');
+        }
+        function getAttachHistoryUnits(emp) {
+            if (!emp || !Array.isArray(emp.attachHistory)) return [];
+            return emp.attachHistory.map(x => typeof x === 'string' ? x : x.unit).filter(Boolean);
+        }
+        function rememberAttachUnit(emp, unit) {
+            if (!emp || !unit) return;
+            if (!Array.isArray(emp.attachHistory)) emp.attachHistory = [];
+            if (!emp.attachHistory.some(x => (typeof x === 'string' ? x : x.unit) === unit)) {
+                emp.attachHistory.push({unit: unit, date: new Date().toISOString()});
+            }
+        }
         function getEmployeeAttachUnits(emp) {
-            let out = (emp.attachHistory || []).map(x => typeof x === 'string' ? x : x.unit).filter(Boolean);
+            let out = getAttachHistoryUnits(emp);
             if (emp && emp.assignUnit && !out.includes(emp.assignUnit)) out.push(emp.assignUnit);
             return out;
         }
+        function getDashboardScopeUnits(unit, includeDescendants=true) { return includeDescendants ? [unit].concat(getDescendantUnits(unit)) : [unit]; }
+        function getDashboardEmployees(unit, includeDescendants=false) {
+            let scope = getDashboardScopeUnits(unit, includeDescendants);
+            let seen = new Set(); let list=[];
+            employees.forEach(emp => {
+                let original = emp.originalUnit || '';
+                let externalHere = original.startsWith('EXTERNAL_ATTACH_' + unit);
+                let originalInScope = scope.includes(original);
+                let assignedHere = emp.assignUnit === unit;
+                let historicalAttachHere = getEmployeeAttachUnits(emp).includes(unit);
+                let include = originalInScope || externalHere || (assignedHere && !scope.includes(original)) || historicalAttachHere;
+                if (include && !seen.has(emp.id)) { seen.add(emp.id); list.push(emp); }
+            });
+            return list;
+        }
+
+        function getDashboardEntries(unit, includeDescendants=false) {
+            let scope = getDashboardScopeUnits(unit, includeDescendants);
+            let entries = [];
+            scope.forEach(contextUnit => {
+                getDashboardEmployees(contextUnit, false).forEach(emp => {
+                    entries.push({ emp: emp, unit: contextUnit });
+                });
+            });
+
+            if (includeDescendants) {
+                const unique = new Map();
+                entries.forEach(entry => {
+                    const emp = entry.emp || {};
+                    const number = String(emp.number || emp.Number || '').trim();
+                    const key = number ? 'number:' + number :
+                        (emp.id != null ? 'id:' + String(emp.id) :
+                        (emp.name ? 'name:' + String(emp.name).trim().toLowerCase() : null));
+                    if (key == null) {
+                        unique.set('row-' + unique.size, entry);
+                    } else if (!unique.has(key)) {
+                        unique.set(key, entry);
+                    }
+                });
+                entries = Array.from(unique.values());
+            }
+            return entries;
+        }
+
+        function dashboardEntryCategory(entry) {
+            const emp = entry.emp || {};
+            if (!entry.consolidated || !entry.rootUnit) return dashboardCategory(emp, entry.unit, false);
+            const scope = getDashboardScopeUnits(entry.rootUnit, true);
+            const original = emp.originalUnit || '';
+            const assigned = emp.assignUnit || '';
+            const externalMarker = original.startsWith('EXTERNAL_ATTACH_');
+            const originalInScope = scope.includes(original);
+            const assignedInScope = scope.includes(assigned);
+            const historyUnits = getEmployeeAttachUnits(emp);
+            const status = emp.remark || emp.bRemark || '';
+            if (status === 'बिदा' || status === 'बिरामी' || status === 'तालिम' ||
+                status === 'शा.से.' || status === 'राते/औट') return status;
+            if (originalInScope && (!assigned || assignedInScope)) return 'खडा';
+            if (originalInScope && assigned && !assignedInScope) return 'काज';
+            if ((!originalInScope || externalMarker) &&
+                (assignedInScope || historyUnits.some(u => scope.includes(u)) ||
+                 scope.some(u => original === 'EXTERNAL_ATTACH_' + u))) return 'खडा';
+            return status || 'भएको';
+        }
+
+        function dashboardEntryCount(entries, trade, cat) {
+            return entries.filter(x => (!trade || x.emp.trade === trade) &&
+                dashboardEntryCategory(x) === cat).length;
+        }
+
+        function dashboardEntryBucketCount(entries, trade, bucket) {
+            return entries.filter(x => {
+                if (trade && x.emp.trade !== trade) return false;
+                if (x.consolidated && x.rootUnit) {
+                    const scope = getDashboardScopeUnits(x.rootUnit, true);
+                    const original = x.emp.originalUnit || '';
+                    const externalMarker = original.startsWith('EXTERNAL_ATTACH_');
+                    const inScope = scope.includes(original);
+                    const effectiveBucket = (inScope && !externalMarker) ? 'दरबन्दी' : 'अट्याच';
+                    return effectiveBucket === bucket;
+                }
+                return dashboardBucket(x.emp, x.unit, false) === bucket;
+            }).length;
+        }
+        const dashboardTradeOrder = ['AM','RM','VM','GM','GF','IM','Gen','AC','HQ'];
+        const dashboardTradeNames = {AM:'आर्मोरर',RM:'रेडियो',VM:'भेहिकल',GM:'जनरल',GF:'आर्मामेन्ट',IM:'ईन्स्ट्रुमेन्ट',Gen:'जेनेरेटर',AC:'ए.सि.',HQ:'हे.का.'};
+        const dashboardCategories = ['शा.से.','काज','तालिम','राते/औट'];                                    
+        function dashboardBucket(emp, unit, includeDescendants=false) {
+            let scope = getDashboardScopeUnits(unit, includeDescendants);
+            let original = emp.originalUnit || '';
+            let externalHere = original.startsWith('EXTERNAL_ATTACH_' + unit);
+            if (externalHere) return 'अट्याच';
+            if (scope.includes(original)) return 'दरबन्दी';
+            return 'अट्याच';
+        }
+        function dashboardCategory(emp,unit,inc=false){
+            let s=getDashboardScopeUnits(unit,inc),o=emp.originalUnit||'',a=emp.assignUnit||'',x=o.startsWith('EXTERNAL_ATTACH_'+unit),d=!!a&&a!==o;
+            let historical = getAttachHistoryUnits(emp);
+            let st=emp.remark||emp.bRemark||'';
+            if(a===unit && o!==unit){
+                return (emp.bRemark && emp.bRemark !== 'काज') ? emp.bRemark : 'खडा';
+            }
+            if (historical.includes(unit) && a !== unit && unit !== o) return 'काज';
+            if(st==='बिदा')return'बिदा';
+            if(s.includes(o)&&d)return inc&&s.includes(a)?'खडा':'काज';
+            if(x)return st||'खडा';
+            return st||'भएको';
+        }
+        function dashboardCount(list, trade, cat, unit, includeDescendants=false) {
+            return list.filter(e => (!trade || e.trade === trade) && dashboardCategory(e, unit, includeDescendants) === cat).length;
+        }
+        function dashboardBucketCount(list, trade, bucket, unit, includeDescendants=false) {
+            return list.filter(e => (!trade || e.trade === trade) && dashboardBucket(e, unit, includeDescendants) === bucket).length;
+        }
+        const dashboardRankOrder = ['प्रा.प्र.से.','प्रा.सेनानी','प्रा.सह.से.','प्रा.उ.से.','प्रा.सु.','प्रा.जम.','ले.जम.','प्रा.हु.','प्रा.अम.','अन्य','ब.का.सि.'];
         
+        function populateRankStrengthUnits() {
+            const sel = document.getElementById('rankStrengthUnit');
+            if (!sel) return;
+            const current = sel.value;
+            sel.innerHTML = '<option value="">Unit छान्नुहोस्...</option>' + units.map(u=>`<option value="${escapeHtml(u)}">${escapeHtml(u)}</option>`).join('');
+            if (current && units.includes(current)) sel.value = current;
+            else if (currentActiveUser && currentActiveUser.unit !== 'admin' && units.includes(currentActiveUser.unit)) sel.value = currentActiveUser.unit;
+            loadRankStrengthForm();
+        }
+        function toggleRankStrengthForm() {
+            const editor = document.getElementById('rankStrengthEditor');
+            if (!editor) return;
+            const willOpen = editor.style.display === 'none' || editor.style.display === '';
+            editor.style.display = willOpen ? 'block' : 'none';
+            if (willOpen) populateRankStrengthUnits();
+        }
+        function loadRankStrengthForm() {
+            const wrap = document.getElementById('rankStrengthForm');
+            if (!wrap) return;
+            const unit = document.getElementById('rankStrengthUnit')?.value || '';
+            const saved = unit && rankRequiredStrength[unit] ? rankRequiredStrength[unit] : {};
+            wrap.innerHTML = dashboardRankOrder.map(rank=>{
+                const val = Number.isFinite(Number(saved[rank])) ? Math.max(0, parseInt(saved[rank],10) || 0) : 0;
+                return `<div style="display:contents;"><div style="border:1px solid #ccc;padding:4px 5px;font-size:10px;font-weight:bold;background:#fff;">${escapeHtml(rank)}</div><div style="border:1px solid #ccc;padding:2px;background:#fff;"><input aria-label="${escapeHtml(rank)} Rank-wise हुनुपर्ने" type="number" min="0" step="1" data-rank-required="${escapeHtml(rank)}" value="${val}" style="width:100%; box-sizing:border-box; height:23px; padding:1px 4px;"></div></div>`;
+            }).join('');
+        }
+        function saveRankStrength() {
+            const unit = document.getElementById('rankStrengthUnit')?.value || '';
+            if (!unit) { alert('पहिला Unit छान्नुहोस्!'); return; }
+            const obj = {};
+            document.querySelectorAll('#rankStrengthForm [data-rank-required]').forEach(input=>{
+                const n = Math.max(0, parseInt(toEnglishNum(input.value || '0'), 10) || 0);
+                obj[input.getAttribute('data-rank-required')] = n;
+            });
+            rankRequiredStrength[unit] = obj;
+            saveDataToStorage();
+            alert(`${unit} को Rank-wise “हुनुपर्ने” संख्या सुरक्षित भयो।`);
+            if (currentActiveUser && currentActiveUser.unit !== 'admin') renderUnitDashboard(currentActiveUser.unit, getDescendantUnits(currentActiveUser.unit).length > 0);
+        }
+        function clearRankStrength() {
+            const unit = document.getElementById('rankStrengthUnit')?.value || '';
+            if (!unit) { alert('पहिला Unit छान्नुहोस्!'); return; }
+            if (!confirm(`${unit} को Rank-wise “हुनुपर्ने” संख्या हटाउने?`)) return;
+            delete rankRequiredStrength[unit];
+            saveDataToStorage();
+            loadRankStrengthForm();
+            if (currentActiveUser && currentActiveUser.unit !== 'admin') renderUnitDashboard(currentActiveUser.unit, getDescendantUnits(currentActiveUser.unit).length > 0);
+        }
+        function getRequiredRankStrength(unit, includeDescendants=false) {
+            const scope = getDashboardScopeUnits(unit, includeDescendants);
+            const out = {};
+            dashboardRankOrder.forEach(rank=>out[rank]=0);
+            scope.forEach(u=>{
+                const saved = rankRequiredStrength[u] || {};
+                dashboardRankOrder.forEach(rank=>{ out[rank] += Math.max(0, parseInt(saved[rank],10) || 0); });
+            });
+            return out;
+        }
+
+        const requiredStrengthFields = [
+            ['AM','आर्मोरर'],['RM','रेडियो'],['VM','भेहिकल'],['GM','जनरल'],['GF','आर्मामेन्ट'],
+            ['IM','ईन्स्ट्रुमेन्ट'],['Gen','जेनेरेटर'],['AC','ए.सि.'],['HQ','हे.का.']
+        ];
+        function populateRequiredStrengthUnits() {
+            const sel = document.getElementById('requiredStrengthUnit');
+            if (!sel) return;
+            const current = sel.value;
+            sel.innerHTML = '<option value="">Unit छान्नुहोस्...</option>' + units.map(u=>`<option value="${escapeHtml(u)}">${escapeHtml(u)}</option>`).join('');
+            if (current && units.includes(current)) sel.value = current;
+            else if (currentActiveUser && currentActiveUser.unit !== 'admin' && units.includes(currentActiveUser.unit)) sel.value = currentActiveUser.unit;
+            loadRequiredStrengthForm();
+        }
+        function toggleRequiredStrengthForm() {
+            const editor = document.getElementById('requiredStrengthEditor');
+            if (!editor) return;
+            const willOpen = editor.style.display === 'none' || editor.style.display === '';
+            editor.style.display = willOpen ? 'block' : 'none';
+            if (willOpen) {
+                populateRequiredStrengthUnits();
+                populateRankStrengthUnits();
+            }
+        }
+        function loadRequiredStrengthForm() {
+            const wrap = document.getElementById('requiredStrengthForm');
+            if (!wrap) return;
+            const unit = document.getElementById('requiredStrengthUnit')?.value || '';
+            const saved = unit && requiredStrength[unit] ? requiredStrength[unit] : {};
+            wrap.innerHTML = requiredStrengthFields.map(([code,name])=>{
+                const val = Number.isFinite(Number(saved[code])) ? Math.max(0, parseInt(saved[code],10) || 0) : 0;
+                return `<div style="display:contents;"><div style="border:1px solid #ccc;padding:4px 5px;font-size:10px;font-weight:bold;background:#fff;">${escapeHtml(code)} - ${escapeHtml(name)}</div><div style="border:1px solid #ccc;padding:2px;background:#fff;"><input aria-label="${escapeHtml(code)} - ${escapeHtml(name)} Trade-wise हुनुपर्ने" type="number" min="0" step="1" data-required-code="${code}" value="${val}" style="width:100%; box-sizing:border-box; height:23px; padding:1px 4px;"></div></div>`;
+            }).join('');
+        }
+        function saveRequiredStrength() {
+            const unit = document.getElementById('requiredStrengthUnit')?.value || '';
+            if (!unit) { alert('पहिला Unit छान्नुहोस्!'); return; }
+            const obj = {};
+            document.querySelectorAll('#requiredStrengthForm [data-required-code]').forEach(input=>{
+                const n = Math.max(0, parseInt(toEnglishNum(input.value || '0'), 10) || 0);
+                obj[input.getAttribute('data-required-code')] = n;
+            });
+            requiredStrength[unit] = obj;
+            saveDataToStorage();
+            alert(`${unit} को “हुनुपर्ने” संख्या सुरक्षित भयो।`);
+            if (currentActiveUser && currentActiveUser.unit !== 'admin') renderUnitDashboard(currentActiveUser.unit, getDescendantUnits(currentActiveUser.unit).length > 0);
+        }
+        function clearRequiredStrength() {
+            const unit = document.getElementById('requiredStrengthUnit')?.value || '';
+            if (!unit) { alert('पहिला Unit छान्नुहोस्!'); return; }
+            if (!confirm(`${unit} को “हुनुपर्ने” संख्या हटाउने?`)) return;
+            delete requiredStrength[unit];
+            saveDataToStorage();
+            loadRequiredStrengthForm();
+            if (currentActiveUser && currentActiveUser.unit !== 'admin') renderUnitDashboard(currentActiveUser.unit, getDescendantUnits(currentActiveUser.unit).length > 0);
+        }
+        function getRequiredStrength(unit, includeDescendants=false) {
+            const scope = getDashboardScopeUnits(unit, includeDescendants);
+            const out = {};
+            requiredStrengthFields.forEach(([code])=>out[code]=0);
+            scope.forEach(u=>{
+                const saved = requiredStrength[u] || {};
+                requiredStrengthFields.forEach(([code])=>{ out[code] += Math.max(0, parseInt(saved[code],10) || 0); });
+            });
+            return out;
+        }
+        function escapeHtml(value) {
+            return String(value ?? '').replace(/[&<>'"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
+        }
+
+        let currentDashboardUnit = '';
+        let currentDashboardIncludeDescendants = false;
+
+        function renderUnitDashboard(unit, includeDescendants=false) {
+            if (!currentActiveUser || currentActiveUser.unit === 'admin') return;
+            currentDashboardUnit = unit;
+            currentDashboardIncludeDescendants = !!includeDescendants;
+            ensureKnownUnitParents();
+            let rootUnit = currentActiveUser.unit;
+            let unitHasSubUnits = getSubUnits(unit).length > 0;
+            let rootHasSubUnits = getDescendantUnits(rootUnit).length > 0;
+            let effectiveIncludeDescendants = !!includeDescendants && unitHasSubUnits;
+            let img = document.getElementById('dashboardLogoImg');
+            if (img) img.src = 'Logo.gif';
+            document.getElementById('dashboardUnitLabel').innerText = '';
+            document.getElementById('dashboardTitle').innerText = effectiveIncludeDescendants ? (unit + ' (अनतर्गत सहित)') : unit;
+            document.getElementById('dashboardDate').innerText = 'मिति: ' + new Date().toLocaleDateString('ne-NP');
+
+            let nav = document.getElementById('dashboardUnitCards'); nav.innerHTML='';
+            let navUnits = rootHasSubUnits ? [rootUnit].concat(getDescendantUnits(rootUnit)) : [rootUnit];
+            if (!navUnits.includes(unit)) navUnits.push(unit);
+            if (rootHasSubUnits) {
+                let consolidatedBtn = document.createElement('button');
+                consolidatedBtn.className = (unit === rootUnit && effectiveIncludeDescendants) ? 'active' : '';
+                consolidatedBtn.innerText = rootUnit + ' (अन्तर्गत सहित)';
+                consolidatedBtn.onclick = () => renderUnitDashboard(rootUnit, true);
+                nav.appendChild(consolidatedBtn);
+            }
+            navUnits.forEach(u=>{
+                let b=document.createElement('button');
+                b.className=(u===unit && !(u===rootUnit && includeDescendants))?'active':'';
+                b.innerText=u;
+                b.onclick=()=>renderUnitDashboard(u, false);
+                nav.appendChild(b);
+            });
+
+            let entries = getDashboardEntries(unit, effectiveIncludeDescendants);
+            if (effectiveIncludeDescendants) {
+                entries = entries.map(x => ({...x, consolidated:true, rootUnit:unit}));
+            }
+            let tradeWrap=document.getElementById('dashboardTradeCards'); tradeWrap.innerHTML='';
+            dashboardTradeOrder.forEach(t=>{
+                let card=document.createElement('div'); card.className='unit-dashboard-card';
+                let bida=dashboardEntryCount(entries,t,'बिदा'), khada=dashboardEntryCount(entries,t,'खडा'), birami=dashboardEntryCount(entries,t,'बिरामी');
+                card.innerHTML=`<div class="trade-card-name">${dashboardTradeNames[t]}</div><div class="trade-card-line">बिरामी - ${toNepaliNum(birami)} जना</div><div class="trade-card-line">बिदा - ${toNepaliNum(bida)} जना</div><div class="trade-card-line">खडा - ${toNepaliNum(khada)} जना</div>`;
+                tradeWrap.appendChild(card);
+            });
+            let totalCard=document.createElement('div'); totalCard.className='unit-dashboard-card total-card';
+            let tb=dashboardEntryCount(entries,null,'बिदा'), tk=dashboardEntryCount(entries,null,'खडा'), tr=dashboardEntryCount(entries,null,'बिरामी'), tsum=tb+tk+tr;
+            totalCard.innerHTML=`<div class="trade-card-name">जम्मा</div><div class="trade-card-line">बिरामी - ${toNepaliNum(tr)} जना</div><div class="trade-card-line">बिदा - ${toNepaliNum(tb)} जना</div><div class="trade-card-line">खडा - ${toNepaliNum(tk)} जना</div><div class="trade-card-line"><b>कुल - ${toNepaliNum(tsum)} जना</b></div>`;
+            tradeWrap.appendChild(totalCard);
+
+            let head=document.getElementById('dashboardSummaryHead');
+            head.innerHTML='<th>आसामी</th>'+dashboardTradeOrder.map(t=>`<th>${dashboardTradeNames[t]}</th>`).join('')+'<th>जम्मा</th>';
+            let body=document.getElementById('dashboardSummaryBody'); body.innerHTML='';
+            const required = getRequiredStrength(unit, effectiveIncludeDescendants);
+            const requiredCounts = dashboardTradeOrder.map(t=>required[t] || 0);
+            const requiredTotal = requiredCounts.reduce((a,b)=>a+b,0);
+            body.innerHTML+=`<tr><td style="font-weight:bold;">हुनुपर्ने</td>${requiredCounts.map(c=>`<td style="font-weight:bold;">${toNepaliNum(c)}</td>`).join('')}<td style="font-weight:bold;">${toNepaliNum(requiredTotal)}</td></tr>`;
+            ['दरबन्दी','अट्याच'].forEach(bucket=>{
+                let counts=dashboardTradeOrder.map(t=>dashboardEntryBucketCount(entries,t,bucket));
+                let total=counts.reduce((a,b)=>a+b,0);
+                const displayBucket = bucket === 'दरबन्दी' ? 'भएको' : bucket;
+                body.innerHTML+=`<tr><td style="font-weight:bold;">${displayBucket}</td>${counts.map(c=>`<td style="font-weight:bold;">${toNepaliNum(c)}</td>`).join('')}<td style="font-weight:bold;">${toNepaliNum(total)}</td></tr>`;
+            });
+
+            dashboardCategories.forEach(cat=>{
+                let counts=dashboardTradeOrder.map(t=>dashboardEntryCount(entries,t,cat));
+                let total=counts.reduce((a,b)=>a+b,0);
+                body.innerHTML+=`<tr><td>${cat}</td>${counts.map(c=>`<td>${toNepaliNum(c)}</td>`).join('')}<td>${toNepaliNum(total)}</td></tr>`;
+            });
+            let allCounts=dashboardTradeOrder.map(t=>entries.filter(x=>x.emp.trade===t).length);
+            let allTotal=allCounts.reduce((a,b)=>a+b,0);
+            body.innerHTML+=`<tr><td style="font-weight:bold;">जम्मा</td>${allCounts.map(c=>`<td style="font-weight:bold;">${toNepaliNum(c)}</td>`).join('')}<td style="font-weight:bold;">${toNepaliNum(allTotal)}</td></tr>`;
+
+            let strengthHead=document.getElementById('dashboardStrengthHead');
+            strengthHead.innerHTML='<th>विवरण</th>'+dashboardRankOrder.map(r=>`<th>${r}</th>`).join('')+'<th>जम्मा</th>';
+            let strengthBody=document.getElementById('dashboardStrengthBody');
+            const requiredRanks = getRequiredRankStrength(unit, effectiveIncludeDescendants);
+            const requiredRankCounts = dashboardRankOrder.map(r=>requiredRanks[r] || 0);
+            const requiredRankTotal = requiredRankCounts.reduce((a,b)=>a+b,0);
+            const actualRankDarbandi = dashboardRankOrder.map(r => entries.filter(x => {
+                if ((x.emp.rank || '') !== r) return false;
+                return dashboardEntryBucketCount([x], null, 'दरबन्दी') > 0;
+            }).length);
+            const actualRankAttach = dashboardRankOrder.map(r => entries.filter(x => {
+                if ((x.emp.rank || '') !== r) return false;
+                return dashboardEntryBucketCount([x], null, 'अट्याच') > 0;
+            }).length);
+            const actualRankCounts = dashboardRankOrder.map((r,i)=>actualRankDarbandi[i]+actualRankAttach[i]);
+            const actualDarbandiTotal = actualRankDarbandi.reduce((a,b)=>a+b,0);
+            const actualAttachTotal = actualRankAttach.reduce((a,b)=>a+b,0);
+            const actualRankTotal = actualRankCounts.reduce((a,b)=>a+b,0);
+            strengthBody.innerHTML=`<tr><td>हुनु पर्ने</td>${requiredRankCounts.map(c=>`<td>${toNepaliNum(c)}</td>`).join('')}<td>${toNepaliNum(requiredRankTotal)}</td></tr>`;
+            strengthBody.innerHTML+=`<tr><td>भएको</td>${actualRankDarbandi.map(c=>`<td>${toNepaliNum(c)}</td>`).join('')}<td>${toNepaliNum(actualDarbandiTotal)}</td></tr>`;
+            strengthBody.innerHTML+=`<tr><td>अट्याच</td>${actualRankAttach.map(c=>`<td>${toNepaliNum(c)}</td>`).join('')}<td>${toNepaliNum(actualAttachTotal)}</td></tr>`;
+            strengthBody.innerHTML+=`<tr><td style="font-weight:bold;">भएको</td>${actualRankCounts.map(c=>`<td style="font-weight:bold;">${toNepaliNum(c)}</td>`).join('')}<td style="font-weight:bold;">${toNepaliNum(actualRankTotal)}</td></tr>`;
+        }
+        function openUnitDashboard() {
+            let unit = currentActiveUser.unit;
+            let hasSubUnits = getDescendantUnits(unit).length > 0;
+            renderUnitDashboard(unit, hasSubUnits);
+            showView('unitDashboardView');
+        }
+
+        function populateUnitDropdowns() {
+            let loginUnitSel = document.getElementById('loginUnitSelect');
+            let newUserUnitSel = document.getElementById('newUserUnit');
+            if(!loginUnitSel) return;
+
+            let currentSelectedUnit = loginUnitSel.value;
+
+            loginUnitSel.innerHTML = '<option value="" disabled selected hidden>युनिट छान्नुहोस्</option><option value="admin">admin</option>';
+            if(newUserUnitSel) {
+                newUserUnitSel.innerHTML = '<option value="" disabled selected hidden>Unit छान्नुहोस्...</option>';
+            }
+
+            units.forEach(u => {
+                loginUnitSel.innerHTML += `<option value="${u}">${getUnitType(u)==='sub' ? '↳ ' : ''}${u}</option>`;
+                if(newUserUnitSel) newUserUnitSel.innerHTML += `<option value="${u}">${u}</option>`;
+            });
+
+            populateUnitParentSelect();
+            if(units.includes(currentSelectedUnit)) {
+                loginUnitSel.value = currentSelectedUnit;
+                onLoginUnitChange();
+            } else {
+                loginUnitSel.value = "";
+                document.getElementById('loginUserSelect').innerHTML = '<option value="" disabled selected hidden>प्रयोगकर्ता छान्नुहोस्</option>';
+            }
+        }
+
+        function updateAssignUnitDropdown() {
+            let assignSel = document.getElementById('empAssignUnit');
+            if(!assignSel) return;
+            assignSel.innerHTML = '<option value="">काज युनिट छान्नुहोस्...</option>';
+            if(!currentActiveUser) return;
+
+            units.forEach(u => {
+                if(u !== currentActiveUser.unit) {
+                    assignSel.innerHTML += `<option value="${u}">${u}</option>`;
+                }
+            });
+        }
+
+        function onLoginUnitChange() {
+            filterUserDropdown();
+            let selectedUnit = document.getElementById('loginUnitSelect').value;
+            let logoImg = document.getElementById('loginLogoImg');
+            let mainCanvas = document.getElementById('mainLogoCanvas');
+
+            logoImg.style.display = 'block';
+            if (mainCanvas) mainCanvas.style.display = 'none';
+            logoImg.onerror = function() { this.onerror = null; this.src = 'a.PNG'; };
+            const selectedUnitLogo = (selectedUnit && selectedUnit !== 'admin') ? unitLogos[selectedUnit] : '';
+            logoImg.src = selectedUnitLogo || 'a.PNG';
+        }
+
+        function filterUserDropdown() {
+            let selectedUnit = document.getElementById('loginUnitSelect').value;
+            let userSel = document.getElementById('loginUserSelect');
+            userSel.innerHTML = '<option value="" disabled selected hidden>प्रयोगकर्ता छान्नुहोस्</option>';
+
+            if(selectedUnit === 'admin') {
+                userSel.innerHTML += `<option value="dinesh">dinesh</option>`;
+                return;
+            }
+
+            let filteredUsers = users.filter(u => u.unit === selectedUnit);
+            filteredUsers.forEach(u => {
+                userSel.innerHTML += `<option value="${u.username}">${u.username}</option>`;
+            });
+        }
+
+        function drawLogoCanvas(canvas, size) {
+            if(!canvas) return;
+            let ctx = canvas.getContext('2d');
+            let center = size / 2;
+            let r = size * 0.42;
+
+            ctx.clearRect(0, 0, size, size);
+            ctx.save();
+            ctx.translate(center, center);
+            ctx.rotate(45 * Math.PI / 180);
+            
+            ctx.fillStyle = "#0056b3";
+            ctx.fillRect(-r, -r, r*2, r);
+            ctx.fillStyle = "#e74c3c";
+            ctx.fillRect(-r, 0, r*2, r);
+            ctx.restore();
+
+            ctx.beginPath();
+            ctx.arc(center, center, size * 0.3, 0, 2 * Math.PI);
+            ctx.fillStyle = "#f1c40f";
+            ctx.fill();
+        }
+
+        function handleImageError(imgEl, canvasId) {
+            imgEl.style.display = 'none';
+            let canvas = document.getElementById(canvasId);
+            if(canvas) { canvas.style.display = 'block'; drawLogoCanvas(canvas, 180); }
+        }
+
+        function handleImageErrorClass(imgEl, canvasClass) {
+            imgEl.style.display = 'none';
+            let canvas = imgEl.parentElement.querySelector('.' + canvasClass);
+            if(canvas) { canvas.style.display = 'block'; drawLogoCanvas(canvas, canvas.width); }
+        }
+
+        function showView(viewId) {
+            document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
+            let targetView = document.getElementById(viewId);
+            if(targetView) targetView.classList.add('active');
+        }
+
+        function getUnitType(unit) { return (unitParents && unitParents[unit]) ? 'sub' : 'main'; }
+        function getUnitTypeLabel(unit) { return getUnitType(unit) === 'sub' ? 'Sub Unit' : 'Main Unit'; }
+        function populateUnitParentSelect() {
+            const sel = document.getElementById('newUnitParent'); if (!sel) return;
+            const current = sel.value; sel.innerHTML = '<option value="">Parent Unit छान्नुहोस्...</option>';
+            units.forEach(u => { sel.innerHTML += `<option value="${u}">${u}</option>`; });
+            if (units.includes(current)) sel.value = current;
+        }
+        function toggleUnitParentField() {
+            const type = document.getElementById('newUnitType'); const wrap = document.getElementById('newUnitParentWrap');
+            if (!type || !wrap) return; wrap.style.display = type.value === 'sub' ? 'block' : 'none';
+            if (type.value === 'sub') populateUnitParentSelect();
+        }
+
+        function addUnit() {
+            let uName = document.getElementById('newUnitName').value.trim();
+            let logoFileInput = document.getElementById('newUnitLogoFile');
+
+            if(!uName) {
+                alert("Please enter the Unit name!");
+                return;
+            }
+
+            if(units.includes(uName)) {
+                alert("This Unit already exists!");
+                return;
+            }
+            const unitType = document.getElementById('newUnitType')?.value || 'main';
+            const parentUnit = document.getElementById('newUnitParent')?.value || '';
+            if (unitType === 'sub' && !parentUnit) { alert("Sub Unit का लागि Parent Unit छान्नुहोस्!"); return; }
+            if (unitType === 'sub' && parentUnit === uName) { alert("आफैंलाई Parent Unit बनाउन मिल्दैन।"); return; }
+
+            if(logoFileInput.files && logoFileInput.files[0]) {
+                let file = logoFileInput.files[0];
+                let reader = new FileReader();
+                reader.onload = function(e) {
+                    unitLogos[uName] = e.target.result;
+                    try {
+                        saveDataToStorage();
+                        finalizeAddUnit(uName, unitType, parentUnit);
+                    } catch(err) {
+                        alert("Error: This file is too large. Please use a smaller file!");
+                    }
+                };
+                reader.readAsDataURL(file);
+            } else {
+                finalizeAddUnit(uName, unitType, parentUnit);
+            }
+        }
+
+        function finalizeAddUnit(uName, unitType='main', parentUnit='') {
+            units.push(uName);
+            if (unitType === 'sub' && parentUnit) unitParents[uName] = parentUnit;
+            else delete unitParents[uName];
+            saveDataToStorage();
+            populateUnitDropdowns();
+            renderAdminTables();
+            document.getElementById('newUnitName').value = '';
+            document.getElementById('newUnitLogoFile').value = '';
+            if (document.getElementById('newUnitType')) document.getElementById('newUnitType').value = 'main';
+            if (document.getElementById('newUnitParent')) document.getElementById('newUnitParent').value = '';
+            toggleUnitParentField();
+            alert("Unit, Type and Parent relationship added successfully!");
+        }
+
+        function changeUnitType(unitName) {
+            const currentType = getUnitType(unitName);
+            const answer = prompt(`"${unitName}" को प्रकार लेख्नुहोस्:\n\nmain = Main Unit\nsub = Sub Unit`, currentType);
+            if (answer === null) return;
+            const type = answer.trim().toLowerCase();
+            if (type !== 'main' && type !== 'sub') { alert('main वा sub मात्र लेख्नुहोस्।'); return; }
+            if (type === 'main') {
+                delete unitParents[unitName];
+            } else {
+                const parent = prompt('Parent Unit को ठ्याक्कै नाम लेख्नुहोस्:', unitParents[unitName] || '');
+                if (parent === null) return;
+                const parentName = parent.trim();
+                if (!units.includes(parentName)) { alert('त्यो Parent Unit भेटिएन।'); return; }
+                if (parentName === unitName) { alert('आफैंलाई Parent Unit बनाउन मिल्दैन।'); return; }
+                if (getDescendantUnits(unitName).includes(parentName)) { alert('यसले circular Sub Unit सम्बन्ध बनाउँछ।'); return; }
+                unitParents[unitName] = parentName;
+            }
+            saveDataToStorage();
+            populateUnitDropdowns();
+            renderAdminTables();
+            if (currentActiveUser && currentActiveUser.unit !== 'admin') renderUnitDashboard(currentActiveUser.unit, true);
+        }
+
+        function deleteUnit(unitName) {
+            const children = getSubUnits(unitName);
+            if (children.length) { alert("पहिला यस Unit अन्तर्गतका Sub Unit हटाउनुहोस् वा Parent परिवर्तन गर्नुहोस्: " + children.join(', ')); return; }
+            if (confirm("Do you want to delete this Unit?")) {
+                units = units.filter(u => u !== unitName);
+                delete unitParents[unitName];
+                if(unitLogos[unitName]) {
+                    delete unitLogos[unitName];
+                }
+                users = users.filter(u => u.unit !== unitName);
+                saveDataToStorage();
+
+                populateUnitDropdowns();
+                renderAdminTables();
+                alert("Unit deleted successfully!");
+            }
+        }
+
+        function addUser() {
+            let name = document.getElementById('newFullName').value;
+            let unit = document.getElementById('newUserUnit').value;
+            let uname = document.getElementById('newUsername').value.trim();
+            let pass = document.getElementById('newPassword').value.trim();
+
+            if(!unit) return alert("Please select a Unit!");
+            if(!uname || !pass) return alert("Username and Password are required!");
+
+            let newId = users.length ? Math.max(...users.map(u => u.id)) + 1 : 10;
+            users.push({ id: newId, username: uname, password: pass, unit: unit, fullName: name });
+            saveDataToStorage();
+            renderAdminTables();
+            alert("User added successfully!");
+            document.getElementById('newUsername').value = '';
+            document.getElementById('newPassword').value = '';
+            document.getElementById('newFullName').value = '';
+            document.getElementById('newUserUnit').selectedIndex = 0;
+        }
+
+        function deleteUser(id) {
+            if (confirm("Do you want to delete this User?")) {
+                users = users.filter(u => u.id !== id);
+                saveDataToStorage();
+                renderAdminTables();
+                populateUnitDropdowns();
+            }
+        }
+
+        function updateExistingUnitLogo(unitName, input) {
+            if (!input || !input.files || !input.files[0]) return;
+            const file = input.files[0];
+            if (!/^image\/(png|gif|jpeg|jpg|webp)$/.test(file.type)) {
+                alert('PNG, GIF वा JPG image छान्नुहोस्।');
+                input.value = '';
+                return;
+            }
+            const reader = new FileReader();
+            reader.onerror = function() {
+                alert('Logo पढ्न सकिएन। अर्को image छान्नुहोस्।');
+                input.value = '';
+            };
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onerror = function() {
+                    alert('यो logo खोल्न सकिएन। PNG/JPG image प्रयोग गर्नुहोस्।');
+                    input.value = '';
+                };
+                img.onload = function() {
+                    try {
+                        const maxSide = 420;
+                        const scale = Math.min(1, maxSide / Math.max(img.naturalWidth || img.width, img.naturalHeight || img.height));
+                        const canvas = document.createElement('canvas');
+                        canvas.width = Math.max(1, Math.round((img.naturalWidth || img.width) * scale));
+                        canvas.height = Math.max(1, Math.round((img.naturalHeight || img.height) * scale));
+                        const ctx = canvas.getContext('2d');
+                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+                        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                        let compressed = canvas.toDataURL('image/webp', 0.78);
+                        if (!compressed || compressed.length < 100 || !compressed.startsWith('data:image/')) {
+                            compressed = canvas.toDataURL('image/png');
+                        }
+                        const oldLogo = unitLogos[unitName];
+                        unitLogos[unitName] = compressed;
+                        if (!saveDataToStorage()) {
+                            if (oldLogo === undefined) delete unitLogos[unitName];
+                            else unitLogos[unitName] = oldLogo;
+                            alert('Logo save हुन सकेन। Browser storage भरिएको हुन सक्छ। System Data Backup गर्नुहोस् र सानो image प्रयोग गर्नुहोस्।');
+                            return;
+                        }
+                        renderAdminTables();
+                        onLoginUnitChange();
+                        alert('Unit logo सफलतापूर्वक save भयो।');
+                    } catch(err) {
+                        console.error('Unit logo update error:', err);
+                        alert('Logo save हुन सकेन। सानो PNG/JPG image प्रयोग गर्नुहोस्।');
+                    } finally {
+                        input.value = '';
+                    }
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function renderAdminTables() {
+            populateRequiredStrengthUnits();
+            populateRankStrengthUnits();
+            let unitTbody = document.querySelector('#adminUnitTable tbody');
+            unitTbody.innerHTML = '';
+            if(units.length === 0) {
+                unitTbody.innerHTML = `<tr><td colspan="5" style="color:#777;">कुनै युनिट छैन</td></tr>`;
+            } else {
+                units.forEach(u => {
+                    let logoThumb = unitLogos[u] ? `<img src="${unitLogos[u]}" style="width:25px; height:25px; object-fit:contain; vertical-align:middle;">` : `<img src="a.PNG" style="width:25px;height:25px;object-fit:contain;vertical-align:middle;" alt="Default">`;
+                    const isSub = getUnitType(u) === 'sub';
+                    const typeLabel = isSub ? 'Sub Unit' : 'Main Unit';
+                    const parentLabel = isSub ? (unitParents[u] || '-') : '-';
+                    unitTbody.innerHTML += `
+                        <tr>
+                            <td>${logoThumb}</td>
+                            <td style="font-weight:bold;">${u}</td>
+                            <td><span style="font-weight:bold; color:${isSub ? '#9b59b6' : '#0056b3'};">${typeLabel}</span></td>
+                            <td>${parentLabel}</td>
+                            <td><label style="display:inline-block;cursor:pointer;font-size:10px;background:#3498db;color:#fff;padding:3px 5px;border-radius:3px;margin-right:2px;">Logo<input type="file" accept="image/png,image/gif,image/jpeg,image/jpg" style="display:none" onchange="updateExistingUnitLogo('${u.replace("'", "\'")}', this)"></label><button class="btn-blue" style="padding: 1px 5px; height:20px; margin-right:2px;" onclick="changeUnitType('${u}')">Type</button><button class="btn-red" style="padding: 1px 5px; height:20px;" onclick="deleteUnit('${u}')">Delete</button></td>
+                        </tr>
+                    `;
+                });
+            }
+
+            let userTbody = document.querySelector('#adminUserTable tbody');
+            userTbody.innerHTML = '';
+            let normalUsers = users.filter(u => u.unit !== 'admin');
+            if(normalUsers.length === 0) {
+                userTbody.innerHTML = `<tr><td colspan="4" style="color:#777;">कुनै युजर छैन</td></tr>`;
+            } else {
+                normalUsers.forEach(u => {
+                    userTbody.innerHTML += `
+                        <tr>
+                            <td>${toNepaliNum(u.id)}</td>
+                            <td>${u.username}</td>
+                            <td>${u.unit}</td>
+                            <td><button class="btn-red" style="padding: 1px 5px; height:20px;" onclick="deleteUser(${u.id})">Delete</button></td>
+                        </tr>
+                    `;
+                });
+            }
+        }
+
+        function handleRemarkChange() {
+            let rem = document.getElementById('empRemark').value;
+            let dateCont = document.getElementById('bidaDateContainer');
+            if (rem === 'बिदा') {
+                dateCont.style.display = 'block';
+            } else {
+                dateCont.style.display = 'none';
+            }
+        }
+
+        function toggleAppointmentFields() {
+            let empIndex = document.getElementById('empIndex').value;
+            if (empIndex === "") {
+                alert("Please select an employee from the table first!");
+                return;
+            }
+            let cont = document.getElementById('appointmentInputContainer');
+            cont.style.display = cont.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function saveAppointmentData() {
+            let empIndex = document.getElementById('empIndex').value;
+            if (empIndex === "") {
+                alert("Please select an employee!");
+                return;
+            }
+            let actualIdx = getFilteredEmployeeActualIndex(parseInt(empIndex));
+            let emp = employees[actualIdx];
+
+            let primaryVal = document.getElementById('primaryAppointmentInput').value.trim();
+            let secondaryVal = document.getElementById('secondaryAppointmentInput').value.trim();
+
+            if (!primaryVal && !secondaryVal) {
+                alert("Please enter at least one Appointment!");
+                return;
+            }
+
+            let existingAptIndex = appointments.findIndex(a => a.unit === currentActiveUser.unit && a.empId === emp.id);
+            
+            let newRecord = {
+                id: existingAptIndex >= 0 ? appointments[existingAptIndex].id : ('apt_' + Date.now() + '_' + Math.floor(Math.random()*1000)),
+                unit: currentActiveUser.unit,
+                empId: emp.id,
+                rank: emp.rank,
+                name: emp.name,
+                mobile: emp.mobile || '',
+                remark: emp.remark || '',
+                primary: primaryVal,
+                secondary: secondaryVal
+            };
+
+            if (existingAptIndex >= 0) {
+                appointments[existingAptIndex] = newRecord;
+            } else {
+                appointments.push(newRecord);
+            }
+
+            saveDataToStorage();
+
+            document.getElementById('primaryAppointmentInput').value = '';
+            document.getElementById('secondaryAppointmentInput').value = '';
+            document.getElementById('appointmentInputContainer').style.display = 'none';
+            populateAppointmentTable();
+        }
+
+        function populateAppointmentTable() {
+            let tbody = document.querySelector('#appointmentTable tbody');
+            tbody.innerHTML = '';
+            let unitAppointments = appointments.filter(a => a.unit === currentActiveUser.unit);
+
+            if (currentAppointmentOnly) {
+                unitAppointments = unitAppointments.filter(item => {
+                    const matchedEmp = employees.find(e => e.id === item.empId);
+                    if (!matchedEmp) return false;
+                    const activeUnit = currentActiveUser.unit;
+                    const isOriginalOwner = (matchedEmp.originalUnit === activeUnit);
+                    const isAssignedHere = (matchedEmp.assignUnit === activeUnit);
+                    const isExternalAttachHere = (matchedEmp.originalUnit && matchedEmp.originalUnit.startsWith("EXTERNAL_ATTACH_" + activeUnit));
+                    let currentRemark = '-';
+                    if (isExternalAttachHere) {
+                        currentRemark = matchedEmp.remark || '-';
+                    } else if (isOriginalOwner) {
+                        currentRemark = (matchedEmp.assignUnit && matchedEmp.assignUnit !== '') ? 'काज' : (matchedEmp.remark || '-');
+                    } else if (isAssignedHere) {
+                        currentRemark = (matchedEmp.bRemark !== undefined && matchedEmp.bRemark !== '') ? matchedEmp.bRemark : 'खडा';
+                    } else {
+                        currentRemark = matchedEmp.remark || '-';
+                    }
+                    return currentRemark === 'खडा';
+                });
+            }
+
+            let searchQuery = document.getElementById('appointmentSearchInput').value.toLowerCase().trim();
+            let searchQueryEng = toEnglishNum(searchQuery);
+
+            if (searchQuery) {
+                unitAppointments = unitAppointments.filter(item => {
+                    let matchedEmp = employees.find(e => e.id === item.empId);
+                    let currentMobile = matchedEmp ? (matchedEmp.mobile || '') : (item.mobile || '');
+                    let mobileEng = toEnglishNum(currentMobile);
+
+                    return (
+                        mobileEng.includes(searchQueryEng) ||
+                        (item.rank && item.rank.toLowerCase().includes(searchQuery)) ||
+                        (item.name && item.name.toLowerCase().includes(searchQuery)) ||
+                        (item.primary && item.primary.toLowerCase().includes(searchQuery)) ||
+                        (item.secondary && item.secondary.toLowerCase().includes(searchQuery)) ||
+                        (item.remark && item.remark.toLowerCase().includes(searchQuery))
+                    );
+                });
+            }
+
+            if (unitAppointments.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="8" style="padding:15px; color:#777;">${currentAppointmentOnly ? 'हाल खडा रहेको कुनै Appointment छैन' : 'कुनै Appointment रेकर्ड छैन'}</td></tr>`;
+                return;
+            }
+
+            let fragment = document.createDocumentFragment();
+            unitAppointments.forEach((item, index) => {
+                let matchedEmp = employees.find(e => e.id === item.empId);
+                let currentMobile = matchedEmp ? (matchedEmp.mobile || '-') : (item.mobile || '-');
+                
+                let currentRemark = '-';
+                if (matchedEmp) {
+                    let activeUnit = currentActiveUser.unit;
+                    let isOriginalOwner = (matchedEmp.originalUnit === activeUnit);
+                    let isAssignedHere = (matchedEmp.assignUnit === activeUnit);
+                    let isExternalAttachHere = (matchedEmp.originalUnit && matchedEmp.originalUnit.startsWith("EXTERNAL_ATTACH_" + activeUnit));
+
+                    if (isExternalAttachHere) {
+                        currentRemark = matchedEmp.remark;
+                    } else if (isOriginalOwner) {
+                        if (matchedEmp.assignUnit && matchedEmp.assignUnit !== "") {
+                            currentRemark = "काज";
+                        } else {
+                            currentRemark = matchedEmp.remark;
+                        }
+                    } else if (isAssignedHere) {
+                        currentRemark = (matchedEmp.bRemark !== undefined && matchedEmp.bRemark !== "") ? matchedEmp.bRemark : "खडा";
+                    }
+                } else {
+                    currentRemark = item.remark || '-';
+                }
+
+                let remarkClass = getRemarkClass(currentRemark);
+
+                let tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${toNepaliNum(index + 1)}</td>
+                    <td>${item.rank}</td>
+                    <td>${item.name}</td>
+                    <td>${toNepaliNum(currentMobile)}</td>
+                    <td class="${remarkClass}">${currentRemark}</td>
+                    <td>${item.primary || '-'}</td>
+                    <td>${item.secondary || '-'}</td>
+                    <td class="no-print">
+                        <button class="btn-red" style="padding: 2px 6px; font-size: 11px;" onclick="deleteAppointment('${item.id}')">Delete</button>
+                    </td>
+                `;
+                fragment.appendChild(tr);
+            });
+            tbody.appendChild(fragment);
+        }
+
+        function deleteAppointment(aptId) {
+            if (confirm("Do you want to delete this Appointment?")) {
+                appointments = appointments.filter(a => String(a.id) !== String(aptId));
+                saveDataToStorage();
+                populateAppointmentTable();
+            }
+        }
+
+        function goDashboard() {
+            currentAppointmentOnly = false;
+            document.querySelectorAll('.modal').forEach(m => m.style.display = 'none');
+            if (!currentActiveUser) return;
+            if (currentActiveUser.unit === 'admin') { showView('adminView'); return; }
+            openUnitDashboard();
+            window.scrollTo(0, 0);
+        }
+
+        function openCurrentAppointmentModal() {
+            currentAppointmentOnly = true;
+            openAppointmentModal();
+        }
+
+        function openAppointmentModal() {
+            document.getElementById('appointmentSearchInput').value = '';
+            document.getElementById('appointmentModalTitle').innerText = currentAppointmentOnly ? '📌 Current Appointment' : '📌 Appointment List';
+            populateAppointmentTable();
+            document.getElementById('appointmentModal').style.display = 'flex';
+        }
+
+        function closeAppointmentModal() {
+            document.getElementById('appointmentModal').style.display = 'none';
+            currentAppointmentOnly = false;
+            document.getElementById('appointmentModalTitle').innerText = '📌 Appointment List';
+        }
+
+        function printAppointmentTable() {
+            let currentUnitName = currentActiveUser ? currentActiveUser.unit : '';
+            document.getElementById('printAppointmentUnitTitle').innerText = ` ${currentUnitName} को Appointment Holder हरुको विवरण ।`;
+            document.body.classList.add('print-appointment-mode');
+            printWithCleanTitle();
+            document.body.classList.remove('print-appointment-mode');
+        }
+
+        function openPostingTransfer() {
+            let renderIdx = document.getElementById('empIndex').value;
+            if (renderIdx === "") {
+                alert("पहिला Posting गर्नुपर्ने कर्मचारीलाई table बाट select गर्नुहोस्!");
+                return;
+            }
+            let actualIdx = getFilteredEmployeeActualIndex(renderIdx);
+            let emp = employees[actualIdx];
+            if (!emp) {
+                alert("कर्मचारीको रेकर्ड फेला परेन।");
+                return;
+            }
+
+            postingTransferEmployeeId = emp.id;
+            let activeUnit = currentActiveUser ? currentActiveUser.unit : '';
+            let originalUnit = emp.originalUnit || '';
+            let displayOriginal = originalUnit.startsWith('EXTERNAL_ATTACH_') ? originalUnit.replace(/^EXTERNAL_ATTACH_/, '').split('_').slice(0,-1).join('_') : originalUnit;
+            document.getElementById('transferEmpNumber').innerText = toNepaliNum(emp.number || '-');
+            document.getElementById('transferEmpName').innerText = emp.name || '-';
+            document.getElementById('transferFromUnit').innerText = displayOriginal || activeUnit || '-';
+            document.getElementById('transferAssignedUnit').innerText = emp.assignUnit || '-';
+
+            let sel = document.getElementById('postingTargetUnit');
+            sel.innerHTML = '<option value="">नयाँ Unit छान्नुहोस्...</option>';
+            units.forEach(u => {
+                if (u !== originalUnit) {
+                    sel.innerHTML += `<option value="${u}">${u}</option>`;
+                }
+            });
+            document.getElementById('postingTransferModal').style.display = 'flex';
+        }
+
+        function closePostingTransfer() {
+            postingTransferEmployeeId = null;
+            document.getElementById('postingTransferModal').style.display = 'none';
+        }
+
+        function confirmPostingTransfer() {
+            let targetUnit = document.getElementById('postingTargetUnit').value;
+            if (!targetUnit) {
+                alert("Posting हुने नयाँ Unit छान्नुहोस्!");
+                return;
+            }
+            let emp = employees.find(e => e.id === postingTransferEmployeeId);
+            if (!emp) {
+                alert("कर्मचारीको रेकर्ड फेला परेन।");
+                closePostingTransfer();
+                return;
+            }
+            let ownerUnit = emp.originalUnit || (currentActiveUser ? currentActiveUser.unit : '');
+            if (ownerUnit.startsWith('EXTERNAL_ATTACH_')) {
+                ownerUnit = ownerUnit.replace(/^EXTERNAL_ATTACH_/, '').split('_').slice(0,-1).join('_');
+            }
+            let previousAttach = emp.assignUnit || '';
+            if (targetUnit === ownerUnit) {
+                alert("नयाँ Unit मूल दरबन्दि Unit नै हुन सक्दैन।");
+                return;
+            }
+            if (targetUnit === previousAttach) {
+                alert("कर्मचारी पहिले नै यही Unit मा काज/अट्याचमा छन्।");
+                return;
+            }
+            if (!confirm(`${emp.name || ''} लाई ${targetUnit} मा काज/अट्याच गर्ने?\n\nमूल दरबन्दि ${ownerUnit} मै रहनेछ। पुरानो काज/अट्याच Unit history मा सुरक्षित हुनेछ र मोबाइल, बिदाको इतिहास, नोट, Appointment तथा अन्य व्यक्तिगत data सुरक्षित रहनेछ।`)) return;
+
+            if (previousAttach && previousAttach !== ownerUnit) rememberAttachUnit(emp, previousAttach);
+            rememberAttachUnit(emp, targetUnit);
+            emp.originalUnit = ownerUnit;
+            emp.assignUnit = targetUnit;
+            emp.darbandi = 'अट्याच';
+            emp.bRemark = 'खडा';
+
+            appointments.forEach(a => {
+                if (a.empId === emp.id) a.unit = targetUnit;
+            });
+
+            saveDataToStorage();
+            closePostingTransfer();
+            document.getElementById('empIndex').value = '';
+            resetEmpForm();
+            updateAssignUnitDropdown();
+            renderEmployeeTable();
+            recordDailySnapshot();
+            alert(`Posting सफल भयो।\n${emp.name || 'कर्मचारी'} अब ${targetUnit} मा अट्याच र प्रारम्भिक रूपमा खडा छन्। मूल दरबन्दि ${ownerUnit} मै कायम छ।`);
+        }
+
+        function saveEmployee() {
+            let index = document.getElementById('empIndex').value;
+            let assignVal = document.getElementById('empAssignUnit').value;
+            let remarkVal = document.getElementById('empRemark').value;
+            let darbandiVal = document.getElementById('empDarbandi').value;
+            let activeUnit = currentActiveUser.unit;
+
+            if (remarkVal === 'काज' && !assignVal) {
+                alert('काजमा Assign गर्नुअघि कृपया Assign Unit (काज युनिट) छान्नुहोस्।');
+                document.getElementById('empAssignUnit').focus();
+                return;
+            }
+
+            const enteredNumber = toEnglishNum(document.getElementById('empNumber').value || '').trim().replace(/\s+/g, '');
+            if (enteredNumber) {
+                const currentEmployeeId = (index !== '')
+                    ? employees[getFilteredEmployeeActualIndex(index)]?.id
+                    : null;
+                const duplicate = employees.find((emp) => {
+                    if (currentEmployeeId !== null && currentEmployeeId !== undefined && String(emp.id) === String(currentEmployeeId)) return false;
+                    const savedNumber = toEnglishNum(String(emp.number || '')).trim().replace(/\s+/g, '');
+                    return savedNumber !== '' && savedNumber === enteredNumber;
+                });
+                if (duplicate) {
+                    alert('⚠️ ध्यान दिनुहोस्! यो ब्यक्तिगत नम्बर सिस्टममा पहिले नै दर्ता छ।\n\nब्य.नं.: ' + document.getElementById('empNumber').value + '\nपहिले दर्ता भएको नाम: ' + (duplicate.name || 'नाम उपलब्ध छैन') + '\n\nएउटै ब्यक्तिगत नम्बर अर्को कर्मचारीलाई दिन मिल्दैन। Duplicate Entry गरिएको छैन।');
+                    return;
+                }
+            }
+            
+            let bidaStart = document.getElementById('empBidaStartDate').value.trim();
+            let bidaReturn = document.getElementById('empBidaReturnDate').value.trim();
+            let monthDays = parseInt(document.getElementById('empMonthDays').value);
+
+            if (remarkVal === 'बिदा' && bidaStart) {
+                let parts = toEnglishNum(bidaStart).split(/[\/\-\.]/);
+                if (parts.length === 3) {
+                    let startDay = parseInt(parts[2]);
+                    if (startDay > monthDays) {
+                        alert(`Error: The selected month has only ${monthDays} days, but the leave start day is ${startDay}. Please enter a valid date!`);
+                        return;
+                    }
+                }
+            }
+
+            if(index === "") {
+                let empId = 'emp_' + Date.now() + '_' + Math.floor(Math.random()*1000);
+                let originalUnitVal = activeUnit;
+                if(darbandiVal === "अट्याच" && assignVal === "") {
+                    originalUnitVal = "EXTERNAL_ATTACH_" + activeUnit + "_" + Date.now();
+                }
+
+                let bidaHistoryArr = [];
+                let generatedNote = toNepaliNum(document.getElementById('empNote').value);
+                if (remarkVal === 'बिदा' && bidaStart) {
+                    let daysDiff = calculateDaysDifference(bidaStart, bidaReturn, monthDays);
+                    bidaHistoryArr.push({
+                        startDate: bidaStart,
+                        returnDate: bidaReturn || '-',
+                        days: daysDiff,
+                        monthDays: monthDays
+                    });
+                    if (bidaReturn) {
+                        let sClean = toNepaliNum(bidaStart.replace(/[\/\-]/g, '।'));
+                        let rClean = toNepaliNum(bidaReturn.replace(/[\/\-]/g, '।'));
+                        generatedNote = `(${sClean} देख ${rClean})`;
+                    }
+                }
+
+                let empData = {
+                    id: empId,
+                    originalUnit: originalUnitVal,
+                    number: document.getElementById('empNumber').value,
+                    rank: document.getElementById('empRank').value,
+                    name: document.getElementById('empName').value,
+                    trade: document.getElementById('empTrade').value,
+                    level: document.getElementById('empLevel').value,
+                    darbandi: darbandiVal,
+                    mobile: document.getElementById('empMobile').value,
+                    note: generatedNote,
+                    task: generatedNote,
+                    assignUnit: assignVal,
+                    attachHistory: assignVal ? [{unit: assignVal, date: new Date().toISOString()}] : [],
+                    remark: (darbandiVal === "अट्याच") ? "खडा" : remarkVal,
+                    bRemark: "खडा",
+                    bidaStartDate: remarkVal === 'बिदा' ? bidaStart : '',
+                    bidaReturnDate: remarkVal === 'बिदा' ? bidaReturn : '',
+                    empMonthDays: monthDays,
+                    bidaHistory: bidaHistoryArr
+                };
+                employees.push(empData);
+            } else {
+                let actualIdx = getFilteredEmployeeActualIndex(index);
+                let currentEmp = employees[actualIdx];
+
+                if (currentEmp.originalUnit === activeUnit && currentEmp.darbandi === "दरबन्दि" && darbandiVal === "अट्याच") {
+                    alert("यो कर्मचारी हाल मूल दरबन्दिमा हुनुहुन्छ। Posting / Unit Transfer नगरी दरबन्दिबाट अट्याचमा परिवर्तन गर्न मिल्दैन।");
+                    document.getElementById('empDarbandi').value = "दरबन्दि";
+                    return;
+                }
+
+                if (currentEmp.originalUnit === activeUnit && currentEmp.assignUnit && currentEmp.assignUnit !== "" && assignVal === "") {
+                    alert("Error: This employee cannot be removed from the original Unit until they are removed using Assign Unit!");
+                    return;
+                }
+
+                if (remarkVal !== 'बिदा') {
+                    const previousLiveRemark = (currentEmp.assignUnit === activeUnit && currentEmp.originalUnit !== activeUnit)
+                        ? (currentEmp.bRemark || 'खडा')
+                        : (currentEmp.remark || currentEmp.bRemark || 'खडा');
+                    if (previousLiveRemark === 'बिदा') {
+                        currentEmp.note = '';
+                        currentEmp.task = '';
+                        document.getElementById('empNote').value = '';
+                    }
+                    currentEmp.bidaStartDate = '';
+                    currentEmp.bidaReturnDate = '';
+                    currentEmp.empMonthDays = '30';
+                } else {
+                    if (bidaStart) {
+                        currentEmp.bidaStartDate = bidaStart;
+                    }
+                    if (bidaReturn) {
+                        currentEmp.bidaReturnDate = bidaReturn;
+                    }
+                    currentEmp.empMonthDays = monthDays;
+
+                    if (!currentEmp.bidaHistory) currentEmp.bidaHistory = [];
+                    
+                    if (bidaStart) {
+                        let daysDiff = calculateDaysDifference(bidaStart, bidaReturn, monthDays);
+                        let lastRecord = currentEmp.bidaHistory[currentEmp.bidaHistory.length - 1];
+                        if (!lastRecord || lastRecord.startDate !== bidaStart) {
+                            currentEmp.bidaHistory.push({
+                                startDate: bidaStart,
+                                returnDate: bidaReturn || '-',
+                                days: daysDiff,
+                                monthDays: monthDays
+                            });
+                        } else {
+                            lastRecord.returnDate = bidaReturn || lastRecord.returnDate;
+                            lastRecord.days = daysDiff;
+                            lastRecord.monthDays = monthDays;
+                        }
+                    }
+
+                    if (bidaStart && bidaReturn) {
+                        let sClean = toNepaliNum(bidaStart.replace(/[\/\-]/g, '।'));
+                        let rClean = toNepaliNum(bidaReturn.replace(/[\/\-]/g, '।'));
+                        document.getElementById('empNote').value = `(${sClean} देखि ${rClean})`;
+                    }
+                }
+
+                if (currentEmp.originalUnit === activeUnit && remarkVal === 'खडा') {
+                    currentEmp.assignUnit = '';
+                    currentEmp.attachHistory = [];
+                    currentEmp.bRemark = 'खडा';
+                    currentEmp.remark = 'खडा';
+                    currentEmp.darbandi = darbandiVal;
+                    if (currentEmp.positionByUnit && typeof currentEmp.positionByUnit === 'object') {
+                        delete currentEmp.positionByUnit[activeUnit];
+                    }
+                } else if (currentEmp.originalUnit && currentEmp.originalUnit !== activeUnit) {
+                    if (currentEmp.assignUnit === activeUnit) currentEmp.bRemark = remarkVal;
+                    if (assignVal && assignVal !== currentEmp.assignUnit && currentEmp.assignUnit === activeUnit) {
+                        if (currentEmp.assignUnit) rememberAttachUnit(currentEmp, currentEmp.assignUnit);
+                        rememberAttachUnit(currentEmp, assignVal);
+                        currentEmp.assignUnit = assignVal;
+                    }
+                } else {
+                    currentEmp.remark = remarkVal;
+                    if (assignVal && assignVal !== currentEmp.assignUnit) {
+                        if (currentEmp.assignUnit) rememberAttachUnit(currentEmp, currentEmp.assignUnit);
+                        rememberAttachUnit(currentEmp, assignVal);
+                    }
+                    currentEmp.assignUnit = assignVal;
+                    currentEmp.darbandi = darbandiVal;
+                }
+
+                currentEmp.number = document.getElementById('empNumber').value;
+                currentEmp.rank = document.getElementById('empRank').value;
+                currentEmp.name = document.getElementById('empName').value;
+                currentEmp.trade = document.getElementById('empTrade').value;
+                currentEmp.level = document.getElementById('empLevel').value;
+                currentEmp.mobile = document.getElementById('empMobile').value;
+                currentEmp.note = toNepaliNum(document.getElementById('empNote').value);
+                currentEmp.task = currentEmp.note;
+            }
+
+            saveDataToStorage();
+            recordDailySnapshot();
+            resetEmpForm();
+            renderEmployeeTable();
+        }
+
+        let currentFilteredIndices = [];
+
+        function getFilteredEmployeeActualIndex(renderedRowIdx) {
+            return currentFilteredIndices[renderedRowIdx];
+        }
+
+        function getRemarkClass(remarkText) {
+            switch(remarkText) {
+                case 'खडा': return 'remark-khada';
+                case 'बिदा': return 'remark-bida';
+                case 'राते/औट': return 'remark-raate';
+                case 'शा.से.': return 'remark-shase';
+                case 'तालिम': return 'remark-talim';
+                case 'काज': return 'remark-kaj';
+                case 'बिरामी': return 'remark-birami';
+                default: return '';
+            }
+        }
+
+        function getUnitPositionMap(emp) {
+            if (!emp || typeof emp !== 'object') return {};
+            if (!emp.positionByUnit || typeof emp.positionByUnit !== 'object' || Array.isArray(emp.positionByUnit)) {
+                emp.positionByUnit = {};
+            }
+            return emp.positionByUnit;
+        }
+
+        function getUnitPosition(emp, unit, fallback) {
+            let map = getUnitPositionMap(emp);
+            let v = Number(map[unit]);
+            return Number.isFinite(v) ? v : fallback;
+        }
+
+        function applyUnitOrder(unit, orderedIndices) {
+            orderedIndices.forEach((idx, pos) => {
+                let emp = employees[idx];
+                if (!emp) return;
+                getUnitPositionMap(emp)[unit] = pos;
+            });
+        }
+
+        const TRADE_ORDER = ['HQ','AM','RM','VM','GM','IM','GF','Gen','AC'];
+        const RANK_ORDER = ['प्रा.प्र.से.','प्रा.सेनानी','प्रा.सह.से.','प्रा.उ.से.','प्रा.सु.','प्रा.जम.','ले.जम.','प्रा.हु.','प्रा.अम.','अन्य','ब.का.सि.'];
+
+        function tradeSortIndex(trade) {
+            const i = TRADE_ORDER.indexOf(trade);
+            return i === -1 ? TRADE_ORDER.length : i;
+        }
+
+        function rankSortIndex(rank) {
+            const i = RANK_ORDER.indexOf(rank);
+            return i === -1 ? RANK_ORDER.length : i;
+        }
+
+        function comparePersonalNumber(a, b) {
+            const rawA = toEnglishNum(String((a && a.number) ?? '').trim());
+            const rawB = toEnglishNum(String((b && b.number) ?? '').trim());
+            const numA = Number(rawA);
+            const numB = Number(rawB);
+            const validA = rawA !== '' && Number.isFinite(numA);
+            const validB = rawB !== '' && Number.isFinite(numB);
+            if (validA && validB && numA !== numB) return numA - numB;
+            if (validA !== validB) return validA ? -1 : 1;
+            return rawA.localeCompare(rawB, undefined, { numeric: true, sensitivity: 'base' });
+        }
+
+        function getOrderGroupKey(unit, emp) {
+            return `${unit}||${emp && emp.trade ? emp.trade : ''}||${emp && emp.rank ? emp.rank : ''}`;
+        }
+
+        function getGroupPosition(emp, unit, fallback) {
+            const key = getOrderGroupKey(unit, emp);
+            const map = getUnitPositionMap(emp);
+            const v = Number(map[key]);
+            return Number.isFinite(v) ? v : fallback;
+        }
+
+        function normalizeGroupPositions(unit, rows) {
+            const groups = {};
+            rows.forEach(r => {
+                const key = getOrderGroupKey(unit, r.emp);
+                if (!groups[key]) groups[key] = [];
+                groups[key].push(r);
+            });
+            Object.keys(groups).forEach(key => {
+                groups[key].sort((a,b) => {
+                    const pa = getGroupPosition(a.emp, unit, a.idx);
+                    const pb = getGroupPosition(b.emp, unit, b.idx);
+                    return pa - pb || a.idx - b.idx;
+                });
+                groups[key].forEach((r,pos) => {
+                    getUnitPositionMap(r.emp)[key] = pos;
+                });
+            });
+        }
+
+        function initializePersonalNumberPositionsForAllExistingRecords() {
+            if (!Array.isArray(employees) || employees.length === 0) return false;
+            const groupsByUnit = {};
+            employees.forEach((emp, idx) => {
+                if (!emp) return;
+                const candidates = new Set();
+                if (emp.unit) candidates.add(String(emp.unit));
+                if (emp.unitName) candidates.add(String(emp.unitName));
+                if (emp.originalUnit && !String(emp.originalUnit).startsWith('EXTERNAL_ATTACH_')) candidates.add(String(emp.originalUnit));
+                if (emp.assignUnit) candidates.add(String(emp.assignUnit));
+                try { getAttachHistoryUnits(emp).forEach(u => { if (u) candidates.add(String(u)); }); } catch (_) {}
+                if (emp.originalUnit && String(emp.originalUnit).startsWith('EXTERNAL_ATTACH_')) {
+                    const externalUnit = String(emp.originalUnit).substring('EXTERNAL_ATTACH_'.length);
+                    if (externalUnit) candidates.add(externalUnit);
+                }
+                candidates.forEach(unit => {
+                    const key = getOrderGroupKey(unit, emp);
+                    const groupId = unit + '\u0000' + key;
+                    if (!groupsByUnit[groupId]) groupsByUnit[groupId] = {unit, key, rows: []};
+                    groupsByUnit[groupId].rows.push({idx, emp});
+                });
+            });
+            Object.values(groupsByUnit).forEach(group => {
+                group.rows.sort((a,b) => comparePersonalNumber(a.emp, b.emp) || a.idx - b.idx);
+                group.rows.forEach((r, pos) => { getUnitPositionMap(r.emp)[group.key] = pos; });
+            });
+            return true;
+        }
+
+        function initializeLegacyEmployeePositions() {
+            if (!Array.isArray(employees) || employees.length === 0) return false;
+            let changed = false;
+            const groupsByUnit = {};
+            employees.forEach((emp, idx) => {
+                if (!emp) return;
+                const candidates = new Set();
+                if (emp.unit) candidates.add(String(emp.unit));
+                if (emp.unitName) candidates.add(String(emp.unitName));
+                if (emp.originalUnit && !String(emp.originalUnit).startsWith('EXTERNAL_ATTACH_')) candidates.add(String(emp.originalUnit));
+                if (emp.assignUnit) candidates.add(String(emp.assignUnit));
+                try { getAttachHistoryUnits(emp).forEach(u => { if (u) candidates.add(String(u)); }); } catch (_) {}
+                if (emp.originalUnit && String(emp.originalUnit).startsWith('EXTERNAL_ATTACH_')) {
+                    const externalUnit = String(emp.originalUnit).substring('EXTERNAL_ATTACH_'.length);
+                    if (externalUnit) candidates.add(externalUnit);
+                }
+                candidates.forEach(unit => {
+                    const key = getOrderGroupKey(unit, emp);
+                    const groupId = unit + '\u0000' + key;
+                    if (!groupsByUnit[groupId]) groupsByUnit[groupId] = {unit, key, rows: []};
+                    groupsByUnit[groupId].rows.push({idx, emp});
+                });
+            });
+            Object.values(groupsByUnit).forEach(group => {
+                const hasMissing = group.rows.some(r => {
+                    const map = getUnitPositionMap(r.emp);
+                    return !Object.prototype.hasOwnProperty.call(map, group.key) || !Number.isFinite(Number(map[group.key]));
+                });
+                if (!hasMissing) return;
+                group.rows.sort((a,b) => comparePersonalNumber(a.emp, b.emp) || a.idx - b.idx);
+                group.rows.forEach((r, pos) => {
+                    const map = getUnitPositionMap(r.emp);
+                    if (Number(map[group.key]) !== pos || !Object.prototype.hasOwnProperty.call(map, group.key)) changed = true;
+                    map[group.key] = pos;
+                });
+            });
+            return changed;
+        }
+
+        function moveWithinSameTradeRank(renderRowPos, direction) {
+            const selectedIdx = currentFilteredIndices[renderRowPos];
+            if (selectedIdx === undefined || !currentActiveUser) return;
+            const activeUnit = currentActiveUser.unit;
+            const currentEmp = employees[selectedIdx];
+            if (!currentEmp) return;
+            const key = getOrderGroupKey(activeUnit, currentEmp);
+
+            const sameGroup = [];
+            employees.forEach((emp, idx) => {
+                if (!emp || getOrderGroupKey(activeUnit, emp) !== key) return;
+                const originalHere = emp.originalUnit === activeUnit;
+                const assignedHere = emp.assignUnit === activeUnit;
+                const historyHere = getAttachHistoryUnits(emp).includes(activeUnit);
+                const externalHere = !!(emp.originalUnit && emp.originalUnit.startsWith('EXTERNAL_ATTACH_' + activeUnit));
+                if (originalHere || assignedHere || historyHere || externalHere) sameGroup.push({idx, emp});
+            });
+
+            sameGroup.sort((a,b) => {
+                const ma = getUnitPositionMap(a.emp);
+                const mb = getUnitPositionMap(b.emp);
+                const hasA = Object.prototype.hasOwnProperty.call(ma, key) && Number.isFinite(Number(ma[key]));
+                const hasB = Object.prototype.hasOwnProperty.call(mb, key) && Number.isFinite(Number(mb[key]));
+                if (hasA && hasB && Number(ma[key]) !== Number(mb[key])) return Number(ma[key]) - Number(mb[key]);
+                if (hasA !== hasB) return hasA ? -1 : 1;
+                return comparePersonalNumber(a.emp, b.emp) || a.idx - b.idx;
+            });
+
+            const pos = sameGroup.findIndex(r => r.idx === selectedIdx);
+            const target = pos + direction;
+            if (pos < 0 || target < 0 || target >= sameGroup.length) return;
+
+            sameGroup.forEach((r, i) => { getUnitPositionMap(r.emp)[key] = i; });
+            const temp = sameGroup[pos];
+            sameGroup[pos] = sameGroup[target];
+            sameGroup[target] = temp;
+            sameGroup.forEach((r, i) => { getUnitPositionMap(r.emp)[key] = i; });
+
+            saveDataToStorage();
+            renderEmployeeTable();
+            const newRenderPos = currentFilteredIndices.indexOf(selectedIdx);
+            if (newRenderPos >= 0) selectEmployee(newRenderPos);
+        }
+
+        function toggleSidebar() {
+            try {
+                var panels = document.querySelectorAll('.sidebar');
+                if (!panels.length) return;
+                var anyOpen = Array.prototype.some.call(panels, function(p){ return p.classList.contains('sidebar-open'); });
+                Array.prototype.forEach.call(panels, function(p){ p.classList.toggle('sidebar-open', !anyOpen); });
+            } catch (e) {}
+        }
+        function closeSidebar() {
+            Array.prototype.forEach.call(document.querySelectorAll('.sidebar'), function(p){ p.classList.remove('sidebar-open'); });
+        }
+
+        function toggleExtraMenu(forceClose) { const m=document.getElementById('extraNavMenu'); if(!m)return; m.style.display=(forceClose===true || m.style.display==='flex')?'none':'flex'; }
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('extraNavMenu');
+            if (!menu || menu.style.display !== 'flex') return;
+            if (menu.contains(event.target)) return;
+            if (event.target.closest && event.target.closest('button[title="Other"]')) return;
+            toggleExtraMenu(true);
+        });
+        function toggleEmployeeColumn(which) { const t=document.getElementById('employeeTable'); if(!t)return; const c=which==='namerol'?'show-namerol':'show-notes'; t.classList.toggle(c); }
+
+        function editEmployeeNote(idx) { const emp=employees[idx]; if(!emp)return; const val=prompt('नोट लेख्नुहोस् / सम्पादन गर्नुहोस्:', emp.note||''); if(val===null)return; emp.note=toNepaliNum(val.trim()); emp.task=emp.note; saveDataToStorage(); renderEmployeeTable(); }
+        function deleteEmployeeNote(idx) { const emp=employees[idx]; if(!emp)return; if(!confirm('यो नोट मेटाउने हो?'))return; emp.note=''; emp.task=''; saveDataToStorage(); renderEmployeeTable(); }
+
+        function renderEmployeeTable() {
+            let tbody = document.querySelector('#employeeTable tbody');
+            tbody.innerHTML = '';
+            currentFilteredIndices = [];
+
+            let rawSearch1 = document.getElementById('searchBox1').value.toLowerCase().trim();
+            let search1Eng = toEnglishNum(rawSearch1);
+            let rawSearch2 = document.getElementById('searchBox2').value.toLowerCase().trim();
+            let search2Eng = toEnglishNum(rawSearch2);
+            let rawSearch3 = document.getElementById('searchBox3').value.toLowerCase().trim();
+            let search3Eng = toEnglishNum(rawSearch3);
+            let rawSearch4 = document.getElementById('searchBox4').value.toLowerCase().trim();
+            let search4Eng = toEnglishNum(rawSearch4);
+
+            let selectedIdx = document.getElementById('empIndex').value;
+            let activeUnit = currentActiveUser.unit;
+            let visibleRows = [];
+
+            employees.forEach((emp, idx) => {
+                let isOriginalOwner = (emp.originalUnit === activeUnit);
+                let isAssignedHere = (emp.assignUnit === activeUnit);
+                let isHistoricalAttachHere = getAttachHistoryUnits(emp).includes(activeUnit);
+                let isExternalAttachHere = (emp.originalUnit && emp.originalUnit.startsWith("EXTERNAL_ATTACH_" + activeUnit));
+
+                let shouldShowHere = false;
+                let displayRemark = emp.remark;
+                let displayDarbandi = emp.darbandi;
+
+                if (isExternalAttachHere) {
+                    shouldShowHere = true;
+                    displayDarbandi = "अट्याच";
+                    displayRemark = emp.remark;
+                } else if (isOriginalOwner) {
+                    if (emp.assignUnit && emp.assignUnit !== "") displayRemark = "काज";
+                    shouldShowHere = true;
+                } else if (isAssignedHere) {
+                    shouldShowHere = true;
+                    displayDarbandi = "अट्याच";
+                    displayRemark = (emp.bRemark !== undefined && emp.bRemark !== "") ? emp.bRemark : "खडा";
+                } else if (isHistoricalAttachHere) {
+                    shouldShowHere = true;
+                    displayDarbandi = "अट्याच";
+                    displayRemark = "काज";
+                }
+
+                if (!shouldShowHere) return;
+
+                let empNumEng = toEnglishNum(emp.number);
+                let empMobileEng = toEnglishNum(emp.mobile);
+                let matchesQuery = (q, qEng) => {
+                    if (!q) return true;
+                    return (
+                        empNumEng.includes(qEng) || empMobileEng.includes(qEng) ||
+                        (emp.rank && emp.rank.toLowerCase().includes(q)) ||
+                        (emp.name && emp.name.toLowerCase().includes(q)) ||
+                        (emp.trade && emp.trade.toLowerCase().includes(q)) ||
+                        (emp.level && emp.level.toLowerCase().includes(q)) ||
+                        (displayDarbandi && displayDarbandi.toLowerCase().includes(q)) ||
+                        (emp.note && emp.note.toLowerCase().includes(q)) ||
+                        (displayRemark && displayRemark.toLowerCase().includes(q))
+                    );
+                };
+
+                if (matchesQuery(rawSearch1, search1Eng) && matchesQuery(rawSearch2, search2Eng) &&
+                    matchesQuery(rawSearch3, search3Eng) && matchesQuery(rawSearch4, search4Eng)) {
+                    visibleRows.push({idx, emp, displayRemark, displayDarbandi});
+                }
+            });
+
+            visibleRows.sort((a, b) => {
+                const ta = tradeSortIndex(a.emp.trade);
+                const tb = tradeSortIndex(b.emp.trade);
+                if (ta !== tb) return ta - tb;
+                const ra = rankSortIndex(a.emp.rank);
+                const rb = rankSortIndex(b.emp.rank);
+                if (ra !== rb) return ra - rb;
+                const activeUnit = currentActiveUser.unit;
+                const groupKeyA = getOrderGroupKey(activeUnit, a.emp);
+                const groupKeyB = getOrderGroupKey(activeUnit, b.emp);
+                if (groupKeyA === groupKeyB) {
+                    const mapA = getUnitPositionMap(a.emp);
+                    const mapB = getUnitPositionMap(b.emp);
+                    const hasA = Object.prototype.hasOwnProperty.call(mapA, groupKeyA) && Number.isFinite(Number(mapA[groupKeyA]));
+                    const hasB = Object.prototype.hasOwnProperty.call(mapB, groupKeyB) && Number.isFinite(Number(mapB[groupKeyB]));
+                    if (hasA && hasB && Number(mapA[groupKeyA]) !== Number(mapB[groupKeyB])) {
+                        return Number(mapA[groupKeyA]) - Number(mapB[groupKeyB]);
+                    }
+                    if (hasA !== hasB) return hasA ? -1 : 1;
+                    return comparePersonalNumber(a.emp, b.emp) || a.idx - b.idx;
+                }
+                return comparePersonalNumber(a.emp, b.emp) || a.idx - b.idx;
+            });
+
+            currentFilteredIndices = visibleRows.map(r => r.idx);
+            let selectedActualIdx = selectedIdx === '' ? -1 : currentFilteredIndices[parseInt(selectedIdx)];
+            let fragment = document.createDocumentFragment();
+
+            visibleRows.forEach((row, renderRowPos) => {
+                let emp = row.emp;
+                let displayRemark = row.displayRemark;
+                let displayDarbandi = row.displayDarbandi;
+                let isSelected = (selectedActualIdx === row.idx) ? "selected-row" : "";
+                let currentPosDisplay = renderRowPos + 1;
+                let remarkClass = getRemarkClass(displayRemark);
+
+                let tr = document.createElement('tr');
+                if (isSelected) tr.className = isSelected;
+                tr.onclick = function() { selectEmployee(renderRowPos); };
+                tr.innerHTML = `
+                    <td>${toNepaliNum(currentPosDisplay)}</td>
+                    <td>${toNepaliNum(emp.number)}</td>
+                    <td>${emp.rank}</td>
+                    <td>${emp.name}</td>
+                    <td>${emp.rank || ''} / ${toNepaliNum(emp.number || '')}</td>
+                    <td>${emp.trade}</td>
+                    <td>${emp.level}</td>
+                    <td>${displayDarbandi}</td>
+                    <td>${toNepaliNum(emp.mobile || '')}</td>
+                    <td class="${remarkClass}">${displayRemark}</td>
+                    <td style="min-width:150px;white-space:pre-wrap">${(emp.task || emp.note || '')}</td>
+                    <td onclick="event.stopPropagation()" class="no-print" style="white-space: nowrap;">
+                        <button class="btn-move" title="सोही Trade/Rank भित्र माथि" onclick="moveWithinSameTradeRank(${renderRowPos}, -1)">▲</button>
+                        <button class="btn-move" title="सोही Trade/Rank भित्र तल" onclick="moveWithinSameTradeRank(${renderRowPos}, 1)">▼</button>
+                    </td>
+                `;
+                fragment.appendChild(tr);
+            });
+            tbody.appendChild(fragment);
+        }
+
+        function moveToPositionDirect(renderRowPos) {
+            let inputEl = document.getElementById(`posInput_${renderRowPos}`);
+            if (!inputEl) return;
+            let targetSN = parseInt(inputEl.value) - 1;
+            if (isNaN(targetSN) || targetSN < 0 || targetSN >= currentFilteredIndices.length) {
+                alert("Invalid serial number!");
+                renderEmployeeTable();
+                return;
+            }
+            if (targetSN === renderRowPos) {
+                selectEmployee(renderRowPos);
+                return;
+            }
+
+            let activeUnit = currentActiveUser.unit;
+            let orderedIndices = currentFilteredIndices.slice();
+            let moved = orderedIndices.splice(renderRowPos, 1)[0];
+            orderedIndices.splice(targetSN, 0, moved);
+
+            applyUnitOrder(activeUnit, orderedIndices);
+            saveDataToStorage();
+            renderEmployeeTable();
+            selectEmployee(targetSN);
+        }
+
+        function selectEmployee(renderRowPos) {
+            let actualIdx = getFilteredEmployeeActualIndex(renderRowPos);
+            let emp = employees[actualIdx];
+            let activeUnit = currentActiveUser.unit;
+            let isExternalAttachHere = (emp.originalUnit && emp.originalUnit.startsWith("EXTERNAL_ATTACH_" + activeUnit));
+            let isAssignedHere = (emp.assignUnit === activeUnit);
+            let isHistoricalAttachHere = getAttachHistoryUnits(emp).includes(activeUnit);
+
+            document.getElementById('empIndex').value = renderRowPos;
+            document.getElementById('empNumber').value = emp.number;
+            document.getElementById('empRank').value = emp.rank;
+            document.getElementById('empName').value = emp.name;
+            document.getElementById('empTrade').value = emp.trade;
+            document.getElementById('empLevel').value = emp.level;
+            document.getElementById('empDarbandi').value = (isExternalAttachHere || isAssignedHere || isHistoricalAttachHere) ? "अट्याच" : emp.darbandi;
+            document.getElementById('empMobile').value = emp.mobile;
+            document.getElementById('empNote').value = (emp.task || emp.note || '');
+            document.getElementById('empAssignUnit').value = emp.assignUnit || "";
+            
+            let currentRem = emp.remark;
+            if (isAssignedHere) {
+                currentRem = (emp.bRemark !== undefined && emp.bRemark !== "") ? emp.bRemark : "खडा";
+            } else if (isHistoricalAttachHere) {
+                currentRem = "काज";
+            }
+            document.getElementById('empRemark').value = currentRem;
+            
+            handleRemarkChange();
+            document.getElementById('empBidaStartDate').value = emp.bidaStartDate || '';
+            document.getElementById('empBidaReturnDate').value = emp.bidaReturnDate || '';
+            document.getElementById('empMonthDays').value = emp.empMonthDays || '30';
+            
+            renderEmployeeTable();
+        }
+
+        function resetEmpForm() {
+            document.getElementById('employeeForm').reset();
+            document.getElementById('empIndex').value = '';
+            document.getElementById('bidaDateContainer').style.display = 'none';
+            document.getElementById('appointmentInputContainer').style.display = 'none';
+            renderEmployeeTable();
+        }
+
+        function deleteEmployee() {
+            let renderIdx = document.getElementById('empIndex').value;
+            if (renderIdx === "") {
+                alert("Please select the data to delete from the table first!");
+                return;
+            }
+
+            if (confirm("Do you want to delete this data?")) {
+                let actualIdx = getFilteredEmployeeActualIndex(renderIdx);
+                let empToDelete = employees[actualIdx];
+                let activeUnit = currentActiveUser.unit;
+                let isExternalAttachHere = (empToDelete.originalUnit && empToDelete.originalUnit.startsWith("EXTERNAL_ATTACH_" + activeUnit));
+
+                if (isExternalAttachHere) {
+                    employees.splice(actualIdx, 1);
+                } else if (empToDelete.originalUnit === activeUnit) {
+                    if (empToDelete.assignUnit && empToDelete.assignUnit !== "") {
+                        alert("Error: This employee cannot be returned or deleted until they are removed using Assign Unit!");
+                        return;
+                    } else {
+                        employees.splice(actualIdx, 1);
+                    }
+                } else if (empToDelete.assignUnit === activeUnit) {
+                    empToDelete.assignUnit = "";
+                    empToDelete.bRemark = "खडा";
+                }
+
+                if(!employees.some(e => e.id === empToDelete.id)) {
+                    appointments = appointments.filter(a => a.empId !== empToDelete.id);
+                }
+
+                saveDataToStorage();
+                recordDailySnapshot();
+                resetEmpForm();
+                renderEmployeeTable();
+            }
+        }
+
+        function openHistoryModal() {
+            document.getElementById('historySearchInput').value = '';
+            populateHistoryTable();
+            document.getElementById('historyModal').style.display = 'flex';
+        }
+
+        function closeHistoryModal() {
+            document.getElementById('historyModal').style.display = 'none';
+        }
+
+        function populateHistoryTable(filterText = '') {
+            let historyTbody = document.querySelector('#historyTable tbody');
+            historyTbody.innerHTML = '';
+            let unitEmps = getActiveUnitEmployees();
+            let filter = filterText.toLowerCase().trim();
+            let filterEng = toEnglishNum(filter);
+
+            let matchedCount = 0;
+            let fragment = document.createDocumentFragment();
+
+            unitEmps.forEach(emp => {
+                let empNumEng = toEnglishNum(emp.number);
+                let nameStr = (emp.rank + ' ' + emp.name).toLowerCase();
+                
+                if (filter && !empNumEng.includes(filterEng) && !nameStr.includes(filter)) {
+                    return;
+                }
+                matchedCount++;
+
+                let historyListStr = '-';
+                let totalSumDays = 0;
+                let lastReturnDate = '-';
+
+                if (emp.bidaHistory && emp.bidaHistory.length > 0) {
+                    let lastH = emp.bidaHistory[emp.bidaHistory.length - 1];
+                    lastReturnDate = lastH.returnDate || '-';
+
+                    historyListStr = emp.bidaHistory.map((h, i) => {
+                        let mDays = h.monthDays || 30;
+                        let dCount = h.days !== undefined ? h.days : calculateDaysDifference(h.startDate, h.returnDate, mDays);
+                        totalSumDays += dCount;
+                        return `<div style="margin-bottom: 3px; border-bottom: 1px dashed #ddd; padding-bottom: 2px;">
+                            <span>[${toNepaliNum(i+1)}] गएको: <b>${h.startDate}</b>, हाजिर: <b>${h.returnDate}</b> (${mDays} दिने) (<b>${toNepaliNum(dCount)} दिन</b>)</span>
+                        </div>`;
+                    }).join('');
+                    
+                    historyListStr += `<div style="margin-top: 4px;"><b style="color:#0056b3;">जम्मा कुल बिदा बसेको दिन: ${toNepaliNum(totalSumDays)} दिन</b></div>`;
+                }
+
+                let isBida = (emp.remark === 'बिदा' && emp.bidaStartDate);
+                let col3Val = isBida ? emp.bidaStartDate : '';
+                let col4Val = isBida ? emp.bidaReturnDate : '';
+
+                let tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td style="font-weight:bold;">${toNepaliNum(emp.number)}</td>
+                    <td>${emp.rank}${emp.name}</td>
+                    <td style="color:#0056b3; font-weight:bold;">${col3Val}</td>
+                    <td style="color:#27ae60; font-weight:bold;">${col4Val}</td>
+                    <td style="color:#c0392b; font-weight:bold;">${lastReturnDate}</td>
+                    <td style="text-align:left; padding-left:8px; line-height:1.4;">${historyListStr}</td>
+                `;
+                fragment.appendChild(tr);
+            });
+
+            if (matchedCount === 0) {
+                historyTbody.innerHTML = `<tr><td colspan="6" style="padding:15px; color:#777;">कुनै रेकर्ड फेला परेन</td></tr>`;
+            } else {
+                historyTbody.appendChild(fragment);
+            }
+        }
+
+        function searchHistoryTable() {
+            let query = document.getElementById('historySearchInput').value;
+            populateHistoryTable(query);
+        }
+
+        function printWithCleanTitle() {
+            updateReportPrintDates();
+            const originalTitle = document.title;
+            document.title = "​";
+            let restored = false;
+            const restoreTitle = () => {
+                if (restored) return;
+                restored = true;
+                document.title = originalTitle;
+                window.removeEventListener("afterprint", restoreTitle);
+            };
+            window.addEventListener("afterprint", restoreTitle);
+            window.print();
+            setTimeout(restoreTitle, 1500);
+        }
+
+        function printHistoryTable() {
+            document.body.classList.add('print-history-mode');
+            printWithCleanTitle();
+            document.body.classList.remove('print-history-mode');
+        }
+
+        function confirmClearHistory() {
+            let enteredPassword = prompt("Enter the authentication password to clear leave history:");
+            if (enteredPassword === null) return;
+
+            if (enteredPassword === "shadow#warrior") {
+                if (confirm("Are you sure you want to permanently clear the leave history of all employees?")) {
+                    let unitEmps = getActiveUnitEmployees();
+                    unitEmps.forEach(emp => {
+                        let mainEmpIdx = employees.findIndex(e => e.id === emp.id);
+                        if (mainEmpIdx !== -1) {
+                            employees[mainEmpIdx].bidaHistory = [];
+                            employees[mainEmpIdx].bidaStartDate = '';
+                            employees[mainEmpIdx].bidaReturnDate = '';
+                        }
+                    });
+                    saveDataToStorage();
+                    populateHistoryTable();
+                    alert("All employees’ leave history has been cleared successfully!");
+                }
+            } else {
+                alert("Incorrect password. Leave history was not cleared.");
+            }
+        }
+
+        function openCalendarModal() {
+            document.getElementById('calendarModal').style.display = 'flex';
+        }
+
+        function closeCalendarModal() {
+            document.getElementById('calendarModal').style.display = 'none';
+        }
+
+        function printEmployeeTable() {
+            updateReportPrintDates();
+            const printMainDate=document.getElementById("printMainDate"); if(printMainDate) printMainDate.textContent=getCurrentNepaliDateText();
+            document.getElementById('printUnitTitle').innerText = `${currentActiveUser.unit}मा कार्यरत व्यक्तिहरुको विवरण।`;
+            document.body.classList.add('print-main-table');
+
+            const cleanup = () => {
+                document.body.classList.remove('print-main-table');
+                window.removeEventListener('afterprint', cleanup);
+            };
+            window.addEventListener('afterprint', cleanup);
+            printWithCleanTitle();
+            setTimeout(cleanup, 3000);
+        }
+
         function getActiveUnitEmployees() {
             let activeUnit = currentActiveUser.unit;
             let list = [];
@@ -1199,19 +3221,962 @@ function showView(viewId) {
                 let isOriginalOwner = (emp.originalUnit === activeUnit);
                 let isAssignedHere = (emp.assignUnit === activeUnit);
                 let isExternalAttachHere = (emp.originalUnit && emp.originalUnit.startsWith("EXTERNAL_ATTACH_" + activeUnit));
-                if (isExternalAttachHere) { let copy = Object.assign({}, emp); copy.darbandi = "अट्याच"; list.push(copy); }
-                else if (isOriginalOwner) { let copy = Object.assign({}, emp); if (copy.assignUnit && copy.assignUnit !== "") copy.remark = "काज"; list.push(copy); }
-                else if (isAssignedHere) { let copy = Object.assign({}, emp); copy.darbandi = "अट्याच"; copy.remark = (emp.bRemark !== undefined && emp.bRemark !== "") ? emp.bRemark : "खडा"; list.push(copy); }
-                else if (getEmployeeAttachUnits(emp).includes(activeUnit)) { let copy = Object.assign({}, emp); copy.darbandi = "अट्याच"; copy.remark = "काज"; list.push(copy); }
+
+                if (isExternalAttachHere) {
+                    let copy = Object.assign({}, emp);
+                    copy.darbandi = "अट्याच";
+                    list.push(copy);
+                } else if (isOriginalOwner) {
+                    let copy = Object.assign({}, emp);
+                    if (copy.assignUnit && copy.assignUnit !== "") {
+                        copy.remark = "काज";
+                    }
+                    list.push(copy);
+                } else if (isAssignedHere) {
+                    let copy = Object.assign({}, emp);
+                    copy.darbandi = "अट्याच";
+                    copy.remark = (emp.bRemark !== undefined && emp.bRemark !== "") ? emp.bRemark : "खडा";
+                    list.push(copy);
+                } else if (getAttachHistoryUnits(emp).includes(activeUnit)) {
+                    let copy = Object.assign({}, emp);
+                    copy.darbandi = "अट्याच";
+                    copy.remark = "काज";
+                    list.push(copy);
+                }
             });
             return list;
         }
 
-        // ... (यहाँ तपाईंको पुरानो कोडका बाँकी फंक्शनहरू जस्तै: renderAdminTables, renderEmployeeTable, saveEmployee, renderUnitDashboard, आदि मिलाएर राख्नुहोस्) ...
-        // (प्लेसहोल्डर: मैले माथि तपाईंले दिएको सबै कोड हटाएको छैन, तर यहाँ स्पेसको कारण देखाउन सकिँदैन। तपाईंले आफ्नो पुरानो कोडको तल्लो भाग यथावत् राख्नुहोस्, तर localStorage प्रयोग गर्ने फंक्शनहरू हटाउनुहोस्।)
+        let graphDatesInitialized = false;
+        const graphBsMonths = ['बैशाख','जेठ','असार','साउन','भदौ','असोज','कात्तिक','मंसिर','पुस','माघ','फागुन','चैत'];
 
+        function graphDateParts(side) {
+            return {
+                year: parseInt(document.getElementById('graph' + (side === 'start' ? 'Start' : 'End') + 'Year').value, 10),
+                month: parseInt(document.getElementById('graph' + (side === 'start' ? 'Start' : 'End') + 'Month').value, 10),
+                day: parseInt(document.getElementById('graph' + (side === 'start' ? 'Start' : 'End') + 'Day').value, 10)
+            };
+        }
+        function graphSelectId(side, part) { return 'graph' + (side === 'start' ? 'Start' : 'End') + part; }
+        function graphDateYearChanged(side) {
+            const monthEl = document.getElementById(graphSelectId(side, 'Month'));
+            if (!monthEl.value) monthEl.value = '1';
+            graphDateMonthChanged(side);
+        }
+        function graphDateMonthChanged(side) {
+            const y = parseInt(document.getElementById(graphSelectId(side, 'Year')).value, 10);
+            const m = parseInt(document.getElementById(graphSelectId(side, 'Month')).value, 10);
+            const dayEl = document.getElementById(graphSelectId(side, 'Day'));
+            const oldDay = parseInt(dayEl.value || '1', 10);
+            let days = 32;
+            try {
+                if (window.NepaliPatro && typeof NepaliPatro.getDaysInMonth === 'function') days = NepaliPatro.getDaysInMonth(y, m);
+                else if (window.NepaliDate && typeof NepaliDate.daysInBsMonth === 'function') days = NepaliDate.daysInBsMonth(y, m);
+                if (y === 2083 && m === 5) days = 31;
+            } catch(e) {}
+            if (!Number.isFinite(days) || days < 29 || days > 32) days = 32;
+            dayEl.innerHTML = '';
+            for (let d = 1; d <= days; d++) { const op = document.createElement('option'); op.value = String(d); op.textContent = toNepaliNum(d); dayEl.appendChild(op); }
+            dayEl.value = String(Math.min(oldDay, days));
+            if (graphDatesInitialized) updateChartData();
+        }
+        function setGraphDateSelects(side, y, m, d) {
+            const yearEl=document.getElementById(graphSelectId(side, 'Year'));
+            if (![...yearEl.options].some(o=>Number(o.value)===Number(y))) { const op=document.createElement('option'); op.value=String(y); op.textContent=toNepaliNum(y); yearEl.add(op); }
+            yearEl.value = String(y);
+            document.getElementById(graphSelectId(side, 'Month')).value = String(m);
+            graphDateMonthChanged(side);
+            document.getElementById(graphSelectId(side, 'Day')).value = String(d);
+        }
+        function graphBsToAd(parts) {
+            try {
+                let result = null;
+                if (window.NepaliPatro && typeof NepaliPatro.convertBSToAD === 'function') {
+                    let inputParts = parts;
+                    const isMissing2083Bhadra31 = parts.year === 2083 && parts.month === 5 && parts.day === 31;
+                    if (isMissing2083Bhadra31) inputParts = {year:2083, month:5, day:30};
+                    try { result = NepaliPatro.convertBSToAD({year:inputParts.year, month:inputParts.month, day:inputParts.day}); } catch(e) {}
+                    if (!result) result = NepaliPatro.convertBSToAD([inputParts.year, inputParts.month, inputParts.day]);
+                    let dt = result instanceof Date ? result : (result && result.adDate ? new Date(result.adDate) : null);
+                    if (dt && !isNaN(dt.getTime())) {
+                        if (isMissing2083Bhadra31 || (parts.year === 2083 && parts.month > 5)) { dt = new Date(dt.getTime()); dt.setDate(dt.getDate()+1); }
+                        return dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0');
+                    }
+                    if (result && result.year && result.month && result.day) return result.year+'-'+String(result.month).padStart(2,'0')+'-'+String(result.day).padStart(2,'0');
+                }
+                if (window.NepaliDate && typeof NepaliDate.bsToAd === 'function') {
+                    const result = NepaliDate.bsToAd(parts.year, parts.month, parts.day);
+                    const formatted = result && result.ad && result.ad.formatted;
+                    if (formatted && /^\d{4}-\d{2}-\d{2}$/.test(formatted)) return formatted;
+                }
+            } catch(e) { console.warn('BS date conversion failed', e); }
+            return null;
+        }
+        function graphAdToBs(dateObj) {
+            try {
+                let inputDate = new Date(dateObj.getFullYear(), dateObj.getMonth(), dateObj.getDate(), 12);
+                const iso = inputDate.getFullYear()+'-'+String(inputDate.getMonth()+1).padStart(2,'0')+'-'+String(inputDate.getDate()).padStart(2,'0');
+                if (iso >= '2026-09-16') inputDate.setDate(inputDate.getDate()-1);
+                if (window.NepaliPatro && typeof NepaliPatro.convertADToBS === 'function') {
+                    const result = NepaliPatro.convertADToBS(inputDate);
+                    if (result && Number(result.year) && Number(result.month) && Number(result.day)) {
+                        let out={year:Number(result.year),month:Number(result.month),day:Number(result.day)};
+                        if (iso >= '2026-09-16' && out.year===2083 && out.month===5 && out.day===30) out.day=31;
+                        return out;
+                    }
+                }
+                if (window.NepaliDate && typeof NepaliDate.adToBs === 'function') {
+                    const result = NepaliDate.adToBs(inputDate.getFullYear(), inputDate.getMonth() + 1, inputDate.getDate());
+                    const formatted = result && result.bs && result.bs.formatted;
+                    if (formatted) { const a = formatted.split('-').map(Number); if (a.length === 3) { let out={year:a[0],month:a[1],day:a[2]}; if (iso >= '2026-09-16' && out.year===2083 && out.month===5 && out.day===30) out.day=31; return out; } }
+                }
+            } catch(e) { console.warn('AD date conversion failed', e); }
+            return null;
+        }
+        function initGraphDateSelectors() {
+            if (graphDatesInitialized) return;
+            const years = [];
+            for (let y = 1975; y <= 2100; y++) years.push(y);
+            ['start','end'].forEach(side => {
+                const yearEl = document.getElementById(graphSelectId(side, 'Year'));
+                const monthEl = document.getElementById(graphSelectId(side, 'Month'));
+                yearEl.innerHTML = years.map(y => `<option value="${y}">${toNepaliNum(y)}</option>`).join('');
+                monthEl.innerHTML = graphBsMonths.map((m,i) => `<option value="${i+1}">${m}</option>`).join('');
+            });
+            const now = new Date(); const start = new Date(now); start.setDate(start.getDate() - 29);
+            const startBs = graphAdToBs(start) || {year:2083,month:1,day:1};
+            const endBs = graphAdToBs(now) || {year:2083,month:1,day:1};
+            setGraphDateSelects('start', startBs.year, startBs.month, startBs.day);
+            setGraphDateSelects('end', endBs.year, endBs.month, endBs.day);
+            graphDatesInitialized = true;
+        }
+        function setGraphLast30Days() {
+            const now = new Date(); const start = new Date(now); start.setDate(start.getDate() - 29);
+            const a = graphAdToBs(start), b = graphAdToBs(now);
+            if (!a || !b) { const st = document.getElementById('graphDateStatus'); if(st) st.textContent = 'नेपाली मिति लाइब्रेरी लोड भएन'; return; }
+            setGraphDateSelects('start', a.year, a.month, a.day);
+            setGraphDateSelects('end', b.year, b.month, b.day);
+            updateChartData();
+        }
+        function openGraphModal() {
+            recordDailySnapshot();
+            document.getElementById('graphModal').style.display = 'flex';
+            initGraphDateSelectors();
+            setTimeout(() => { renderAttendanceChart(); }, 80);
+        }
+
+        function closeGraphModal() {
+            document.getElementById('graphModal').style.display = 'none';
+            let existingTooltip = document.querySelector('div.chartjs-tooltip');
+            if (existingTooltip) existingTooltip.remove();
+        }
+
+        function updateChartData() { if (document.getElementById('graphModal').style.display === 'flex') renderAttendanceChart(); }
+
+        function renderAttendanceChart() {
+            const ctx = document.getElementById('attendanceChart').getContext('2d');
+            if (!graphDatesInitialized) initGraphDateSelectors();
+
+            let darbandiFilter = document.getElementById('graphDarbandiFilter').value;
+            let tradeFilter = document.getElementById('graphTradeFilter').value;
+
+            let unitHistory = attendanceHistory.filter(h => h.unit === currentActiveUser.unit);
+            unitHistory.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+            const startAd = graphBsToAd(graphDateParts('start'));
+            const endAd = graphBsToAd(graphDateParts('end'));
+            const statusEl = document.getElementById('graphDateStatus');
+            if (!startAd || !endAd) { if(statusEl) statusEl.textContent = 'मिति Converter लोड भएन वा मिति अमान्य छ'; return; }
+            if (startAd > endAd) { if(statusEl) statusEl.textContent = 'सुरु मिति अन्त्य मितिभन्दा अघि राख्नुहोस्'; return; }
+            if(statusEl) statusEl.textContent = `${graphDateLabelNepali(startAd)} देखि ${graphDateLabelNepali(endAd)} सम्म`; 
+
+            let selectedDates = [];
+            const cursor = new Date(startAd + 'T12:00:00');
+            const finish = new Date(endAd + 'T12:00:00');
+            const daySpan = Math.floor((finish - cursor) / 86400000) + 1;
+            if (daySpan > 2000) { if(statusEl) statusEl.textContent = 'एकपटकमा अधिकतम २००० दिन छान्नुहोस्'; return; }
+            while (cursor <= finish) {
+                selectedDates.push(`${cursor.getFullYear()}-${String(cursor.getMonth()+1).padStart(2,'0')}-${String(cursor.getDate()).padStart(2,'0')}`);
+                cursor.setDate(cursor.getDate() + 1);
+            }
+
+            let historyMap = {};
+            unitHistory.forEach(h => { historyMap[h.date] = h.employees; });
+            let lastValidEmployees = [];
+            for (const h of unitHistory) { if (h.date < startAd) lastValidEmployees = h.employees; else break; }
+            let processedSnapshots = [];
+            selectedDates.forEach(dateStr => {
+                if (historyMap[dateStr]) lastValidEmployees = historyMap[dateStr];
+                processedSnapshots.push({ date: dateStr, employees: lastValidEmployees });
+            });
+
+            let labels = processedSnapshots.map(s => s.date);
+            let datasets = [];
+
+            let colors = ['#3498db', '#e67e22', '#2ecc71', '#e74c3c', '#9b59b6', '#1abc9c', '#f1c40f'];
+
+            function getEmployeesForRemarkAndDate(snapshot, rem) {
+                return snapshot.employees.filter(e => {
+                    let matchesDarbandi = (darbandiFilter === 'all' || e.darbandi === darbandiFilter);
+                    let matchesRemark = (e.remark === rem);
+                    let matchesTrade = (tradeFilter === 'all' || e.trade === tradeFilter);
+                    return matchesDarbandi && matchesRemark && matchesTrade;
+                });
+            }
+
+            let colorIdx = 0;
+            for (let i = 1; i <= 7; i++) {
+                let remVal = document.getElementById('graphRemarkFilter' + i).value;
+                if (remVal && remVal !== 'none' && remVal !== 'all') {
+                    let col = colors[colorIdx % colors.length];
+                    datasets.push({
+                        label: remVal,
+                        data: processedSnapshots.map(snapshot => getEmployeesForRemarkAndDate(snapshot, remVal).length),
+                        employeeLists: processedSnapshots.map(snapshot => getEmployeesForRemarkAndDate(snapshot, remVal)),
+                        borderColor: col, backgroundColor: col, borderWidth: 2, fill: false, tension: 0.1
+                    });
+                    colorIdx++;
+                }
+            }
+
+            const chartConfig = {
+                type: 'line',
+                data: { labels: labels, datasets: datasets },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: { x: { ticks: { autoSkip: true, maxTicksLimit: 18, callback: function(value) { return graphDateLabelNepali(this.getLabelForValue(value)); } } }, y: { beginAtZero: true, ticks: { precision: 0, callback: function(value) { return toNepaliNum(value); } } } },
+                    plugins: {
+                        legend: { position: 'bottom' },
+                        tooltip: {
+                            enabled: false,
+                            external: function(context) {
+                                let tooltipEl = document.querySelector('div.chartjs-tooltip');
+                                if (!tooltipEl) {
+                                    tooltipEl = document.createElement('div');
+                                    tooltipEl.className = 'chartjs-tooltip';
+                                    tooltipEl.style.position = 'absolute';
+                                    tooltipEl.style.background = 'rgba(0, 0, 0, 0.9)';
+                                    tooltipEl.style.color = 'white';
+                                    tooltipEl.style.borderRadius = '16px';
+                                    tooltipEl.style.padding = '20px';
+                                    tooltipEl.style.width = '320px';       
+                                    tooltipEl.style.minWidth = '300px';    
+                                    tooltipEl.style.pointerEvents = 'auto';
+                                    tooltipEl.style.maxHeight = '280px';
+                                    tooltipEl.style.overflowY = 'auto';
+                                    tooltipEl.style.zIndex = '1000';
+                                    tooltipEl.style.fontSize = '12px';
+                                    tooltipEl.style.boxShadow = '0 4px 10px rgba(0,0,0,0.4)';
+                                    
+                                    tooltipEl.addEventListener('mouseleave', function() { tooltipEl.style.opacity = 0; });
+                                    document.body.appendChild(tooltipEl);
+                                }
+
+                                let tooltipModel = context.tooltip;
+                                if (tooltipModel.opacity === 0) return;
+
+                                let dataIndex = tooltipModel.dataPoints[0].dataIndex;
+                                let currentDate = graphDateLabelNepali(labels[dataIndex]);
+                                let innerHtml = `<div style="font-weight:bold; margin-bottom:6px; border-bottom:1px solid #777; padding-bottom:4px; font-size:13px;">मिति: ${currentDate}</div>`;
+
+                                tooltipModel.dataPoints.forEach(dp => {
+                                    let dataset = context.chart.data.datasets[dp.datasetIndex];
+                                    let empList = dataset.employeeLists[dataIndex];
+                                    innerHtml += `<div style="margin-top:6px; color:${dataset.borderColor}; font-weight:bold;">${dataset.label} (${dp.parsed.y} जना):</div>`;
+                                    if (empList && empList.length > 0) {
+                                        innerHtml += `<ul style="margin: 4px 0 6px 15px; padding: 0; line-height: 1.5;">`;
+                                        empList.forEach(emp => {
+                                            innerHtml += `<li>${emp.name || ''} (<span style="color:#ffeb3b;">${emp.rank || ''}</span>)</li>`;
+                                        });
+                                        innerHtml += `</ul>`;
+                                    } else {
+                                        innerHtml += `<div style="margin-left:15px; color:#aaa; font-style:italic;">No one</div>`;
+                                    }
+                                });
+
+                                tooltipEl.innerHTML = innerHtml;
+                                let position = context.chart.canvas.getBoundingClientRect();
+                                tooltipEl.style.opacity = 1;
+                                tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 15 + 'px';
+                                tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
+                            }
+                        }
+                    }
+                }
+            };
+            if (myChart) {
+                myChart.data.labels = labels;
+                myChart.data.datasets = datasets;
+                myChart.options = chartConfig.options;
+                myChart.update('none');
+            } else {
+                myChart = new Chart(ctx, chartConfig);
+            }
+        }
+
+        function openRollcallModal() {
+            document.getElementById('reportHeader').innerText = `${currentActiveUser.unit}को पि.टि./रोलकल हाजिर।`;
+            let unitEmps = getActiveUnitEmployees();
+            let categories = ["भएको", "अट्याच", "शा.से.", "तालिम", "काज", "बिदा", "राते/औट", "बिरामी", "खडा"];
+            let tbody = document.getElementById('rollcallTableBody');
+            tbody.innerHTML = '';
+
+            let fragment = document.createDocumentFragment();
+            categories.forEach(cat => {
+                let officerCount = unitEmps.filter(e => e.level === 'अधिकृत' && matchStatusCategory(e, cat)).length;
+                let padikCount = unitEmps.filter(e => e.level === 'पदिक' && matchStatusCategory(e, cat)).length;
+                let anyaCount = unitEmps.filter(e => e.level === 'अन्यदर्जा' && matchStatusCategory(e, cat)).length;
+                let total = officerCount + padikCount + anyaCount;
+
+                let tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td style="font-weight:bold;">${cat}</td>
+                    <td>${toNepaliNum(officerCount)}</td>
+                    <td>${toNepaliNum(padikCount)}</td>
+                    <td>${toNepaliNum(anyaCount)}</td>
+                    <td style="font-weight:bold;">${toNepaliNum(total)}</td>
+                `;
+                fragment.appendChild(tr);
+            });
+            tbody.appendChild(fragment);
+            document.getElementById('rollcallModal').style.display = 'flex';
+        }
+
+        function closeRollcallModal() { document.getElementById('rollcallModal').style.display = 'none'; }
+
+        function openTradeModal() {
+            document.getElementById('tradeReportHeader').innerText = `${currentActiveUser.unit}को ट्रेड हाजिर।`;
+            let unitEmps = getActiveUnitEmployees();
+            let categories = ["भएको", "अट्याच", "शा.से.", "तालिम", "काज", "बिदा", "राते/औट", "बिरामी", "खडा"];
+            let tradeCodes = ["AM", "RM", "VM", "GM", "GF", "IM", "Gen", "AC", "HQ"];
+            let tbody = document.getElementById('tradeTableBody');
+            tbody.innerHTML = '';
+
+            let fragment = document.createDocumentFragment();
+            categories.forEach(cat => {
+                let rowHtml = `<tr><td style="font-weight:bold;">${cat}</td>`;
+                let rowTotal = 0;
+                tradeCodes.forEach(code => {
+                    let count = unitEmps.filter(e => (e.trade === code || tradeMapping[e.trade] === tradeMapping[code]) && matchStatusCategory(e, cat)).length;
+                    rowTotal += count;
+                    rowHtml += `<td>${toNepaliNum(count)}</td>`;
+                });
+                rowHtml += `<td style="font-weight:bold;">${toNepaliNum(rowTotal)}</td></tr>`;
+                
+                let tr = document.createElement('tr');
+                tr.innerHTML = rowHtml.replace(/^<tr>|<\/tr>$/g, '');
+                fragment.appendChild(tr);
+            });
+            tbody.appendChild(fragment);
+            document.getElementById('tradeModal').style.display = 'flex';
+        }
+
+        function closeTradeModal() { document.getElementById('tradeModal').style.display = 'none'; }
+
+        function matchStatusCategory(emp, cat) {
+            let activeUnit = currentActiveUser.unit;
+            let isAttachedHere = (emp.assignUnit === activeUnit || getAttachHistoryUnits(emp).includes(activeUnit) || emp.darbandi === "अट्याच" || (emp.originalUnit && emp.originalUnit.startsWith("EXTERNAL_ATTACH_" + activeUnit)));
+
+            if(cat === "भएको") {
+                if (isAttachedHere || emp.darbandi === "अट्याच") return false;
+                return true;
+            }
+            if(cat === "अट्याच") return isAttachedHere;
+            if(emp.originalUnit === activeUnit && emp.assignUnit && emp.assignUnit !== "" && cat === "काज") return true;
+            
+            let isExternalAttachHere = (emp.originalUnit && emp.originalUnit.startsWith("EXTERNAL_ATTACH_" + activeUnit));
+            let currentRemark = isExternalAttachHere ? emp.remark : ((emp.assignUnit === activeUnit) ? ((emp.bRemark !== undefined && emp.bRemark !== "") ? emp.bRemark : "खडा") : emp.remark);
+            return currentRemark === cat;
+        }
+
+        function exportToExcel() {
+            let unitEmps = getActiveUnitEmployees();
+            let csvContent = "\uFEFFSN,Number,Rank,Name,Trade,Level,Darbandi,Mobile,Note,Remark,BidaStart,BidaReturn,MonthDays\n";
+            let autoSN = 1;
+            unitEmps.forEach(e => {
+                let row = [
+                    autoSN++,
+                    `"${e.number || ''}"`,
+                    `"${e.rank || ''}"`,
+                    `"${e.name || ''}"`,
+                    `"${e.trade || ''}"`,
+                    `"${e.level || ''}"`,
+                    `"${e.darbandi || ''}"`,
+                    `"${e.mobile || ''}"`,
+                    `"${e.note || ''}"`,
+                    `"${e.remark || ''}"`,
+                    `"${e.bidaStartDate || ''}"`,
+                    `"${e.bidaReturnDate || ''}"`,
+                    `"${e.empMonthDays || '30'}"`
+                ];
+                csvContent += row.join(",") + "\n";
+            });
+
+            demsSaveFile(`${currentActiveUser.unit}_Attendance.csv`, csvContent, 'text/csv');
+        }
+
+        function demsSaveFile(filename, text, mime) {
+            mime = mime || 'application/json';
+            try {
+                if (window.DEMSAndroid && typeof window.DEMSAndroid.saveFile === 'function') {
+                    window.DEMSAndroid.saveFile(filename, text, mime);
+                    return;
+                }
+            } catch (e) {}
+            try {
+                var blob = new Blob([text], { type: mime + ';charset=utf-8;' });
+                var url = URL.createObjectURL(blob);
+                var a = document.createElement('a');
+                a.setAttribute('href', url);
+                a.setAttribute('download', filename);
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                setTimeout(function(){ try { URL.revokeObjectURL(url); } catch (e) {} }, 4000);
+                return;
+            } catch (e) {}
+            var dataStr = 'data:' + mime + ';charset=utf-8,' + encodeURIComponent(text);
+            var a2 = document.createElement('a');
+            a2.setAttribute('href', dataStr);
+            a2.setAttribute('download', filename);
+            document.body.appendChild(a2);
+            a2.click();
+            a2.remove();
+        }
+
+        function exportUserData() {
+            if (!currentActiveUser) return;
+            let myUnitEmps = employees.filter(e => e.originalUnit === currentActiveUser.unit || (e.originalUnit && e.originalUnit.startsWith("EXTERNAL_ATTACH_" + currentActiveUser.unit)));
+            let backupObject = {
+                type: "USER_BACKUP",
+                unit: currentActiveUser.unit,
+                user: currentActiveUser.username,
+                exportDate: new Date().toLocaleDateString('ne-NP'),
+                records: myUnitEmps,
+                history: attendanceHistory.filter(h => h.unit === currentActiveUser.unit),
+                appointments: appointments.filter(a => a.unit === currentActiveUser.unit)
+            };
+
+            demsSaveFile(`${currentActiveUser.unit}_Backup_${new Date().toISOString().slice(0,10)}.dat`, JSON.stringify(backupObject, null, 2), 'application/json');
+        }
+
+        function triggerUserImport() { document.getElementById('userImportFileInput').click(); }
+
+        function importUserData(event) {
+            let fileInput = event.target;
+            if (!fileInput.files.length) return;
+
+            let fileReader = new FileReader();
+            fileReader.onload = function(e) {
+                try {
+                    let importedData = JSON.parse(e.target.result);
+                    let importedRecords = importedData.records || importedData;
+
+                    if (confirm("Do you want to import this data?")) {
+                        employees = employees.filter(e => e.originalUnit !== currentActiveUser.unit && !(e.originalUnit && e.originalUnit.startsWith("EXTERNAL_ATTACH_" + currentActiveUser.unit)));
+                        importedRecords.forEach(emp => employees.push(emp));
+
+                        if (Array.isArray(importedData.history)) {
+                            attendanceHistory = attendanceHistory.filter(h => h.unit !== currentActiveUser.unit);
+                            importedData.history.forEach(h => attendanceHistory.push(h));
+                        }
+                        if (Array.isArray(importedData.appointments)) {
+                            appointments = appointments.filter(a => a.unit !== currentActiveUser.unit);
+                            importedData.appointments.forEach(a => appointments.push(a));
+                        }
+
+                        saveDataToStorage();
+                        alert("Data imported successfully!");
+                        resetEmpForm();
+                        renderEmployeeTable();
+                    }
+                } catch(err) {
+                    alert("An error occurred while importing the file!");
+                }
+                fileInput.value = '';
+            };
+            fileReader.readAsText(fileInput.files[0]);
+        }
+
+        function exportAppointmentData() {
+            if (!currentActiveUser || currentActiveUser.unit === 'admin') return;
+            let unitAppointments = appointments.filter(a => a.unit === currentActiveUser.unit);
+            let backupObject = {
+                type: "APPOINTMENT_BACKUP",
+                unit: currentActiveUser.unit,
+                exportDate: new Date().toISOString(),
+                appointments: unitAppointments
+            };
+            demsSaveFile(`${currentActiveUser.unit}_Appointment_Backup_${new Date().toISOString().slice(0,10)}.dat`, JSON.stringify(backupObject, null, 2), 'application/json');
+        }
+
+        function triggerAppointmentImport() {
+            if (!currentActiveUser || currentActiveUser.unit === 'admin') return;
+            document.getElementById('appointmentImportFileInput').click();
+        }
+
+        function importAppointmentData(event) {
+            let fileInput = event.target;
+            if (!fileInput.files.length || !currentActiveUser || currentActiveUser.unit === 'admin') return;
+            let fileReader = new FileReader();
+            fileReader.onload = function(e) {
+                try {
+                    let importedData = JSON.parse(e.target.result);
+                    let importedAppointments = Array.isArray(importedData.appointments) ? importedData.appointments : (Array.isArray(importedData) ? importedData : []);
+                    if (!importedAppointments.length) {
+                        alert("No Appointment data found in the selected file!");
+                        fileInput.value = '';
+                        return;
+                    }
+                    if (confirm("Do you want to import Appointment data for this Unit?")) {
+                        let activeUnit = currentActiveUser.unit;
+                        let validAppointments = importedAppointments.map(a => ({...a, unit: activeUnit}));
+                        let importedIds = new Set(validAppointments.map(a => String(a.empId)));
+                        appointments = appointments.filter(a => !(a.unit === activeUnit && importedIds.has(String(a.empId))));
+                        validAppointments.forEach(a => appointments.push(a));
+                        saveDataToStorage();
+                        populateAppointmentTable();
+                        alert("Appointment data imported successfully!");
+                    }
+                } catch (err) {
+                    alert("An error occurred while importing Appointment data!");
+                }
+                fileInput.value = '';
+            };
+            fileReader.readAsText(fileInput.files[0]);
+        }
+
+        function blobToDataUrlForBackup(blob) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => resolve(String(reader.result || ''));
+                reader.onerror = () => reject(reader.error || new Error('Could not read file'));
+                reader.readAsDataURL(blob);
+            });
+        }
+
+        async function exportFullAdminData() {
+            try {
+                const uploadedFiles = [];
+                try {
+                    const storedFiles = await getDataFileRecords();
+                    for (const f of storedFiles) {
+                        uploadedFiles.push({
+                            name: f.name, type: f.type || 'application/octet-stream',
+                            size: f.size || 0, lastModified: f.lastModified || 0, folder: f.folder || '',
+                            addedAt: f.addedAt || Date.now(),
+                            dataUrl: await blobToDataUrlForBackup(f.blob)
+                        });
+                    }
+                } catch (fileErr) {
+                    console.warn('Could not export Data-menu files:', fileErr);
+                }
+                const storageSnapshot = {};
+                for (let i = 0; i < localStorage.length; i++) {
+                    const key = localStorage.key(i);
+                    if (key) storageSnapshot[key] = localStorage.getItem(key);
+                }
+                const fullBackupObj = {
+                    type: "FULL_SYSTEM_BACKUP", version: 4, dataFolders: getDataFolders(), exportedAt: new Date().toISOString(),
+                    units, unitParents, users, employees, unitLogos, attendanceHistory, appointments,
+                    requiredStrength, rankRequiredStrength, darbandiCharts,
+                    uploadedFiles, storageSnapshot
+                };
+                demsSaveFile(`DEMS_Full_System_Backup_${new Date().toISOString().slice(0,10)}.json`, JSON.stringify(fullBackupObj, null, 2), 'application/json');
+                alert(`Full Backup तयार भयो।`);
+            } catch (err) {
+                alert('Backup बनाउन सकिएन। Data फाइल धेरै ठूलो भएमा केही फाइल हटाएर फेरि प्रयास गर्नुहोस्।');
+            }
+        }
+
+        function triggerAdminImport() { document.getElementById('adminImportFileInput').click(); }
+
+        function importFullAdminData(errorEvent) {
+            const fileInput = errorEvent.target;
+            if (!fileInput.files.length) return;
+            const fileReader = new FileReader();
+            fileReader.onload = async function(e) {
+                try {
+                    const backupData = JSON.parse(e.target.result);
+                    if (backupData.type !== "FULL_SYSTEM_BACKUP" || !Array.isArray(backupData.units) || !Array.isArray(backupData.users) || !Array.isArray(backupData.employees)) {
+                        alert("यो DEMS को Full System Backup फाइल होइन।");
+                        fileInput.value = '';
+                        return;
+                    }
+                    if (confirm("सम्पूर्ण DEMS प्रणालीको डाटा Import/Restore गर्ने?")) {
+                        if (backupData.storageSnapshot) {
+                            Object.entries(backupData.storageSnapshot).forEach(([k,v]) => localStorage.setItem(k, String(v)));
+                        }
+                        units = backupData.units || [];
+                        unitParents = backupData.unitParents || {};
+                        users = backupData.users || [];
+                        employees = backupData.employees || [];
+                        unitLogos = backupData.unitLogos || {};
+                        attendanceHistory = backupData.attendanceHistory || [];
+                        appointments = backupData.appointments || [];
+                        requiredStrength = backupData.requiredStrength || {};
+                        rankRequiredStrength = backupData.rankRequiredStrength || {};
+                        darbandiCharts = backupData.darbandiCharts || {};
+                        saveDataToStorage();
+                        
+                        if (Array.isArray(backupData.dataFolders)) saveDataFolders(backupData.dataFolders);
+                        if (Array.isArray(backupData.uploadedFiles)) {
+                            const db = await openDataDb();
+                            const existing = await getDataFileRecords();
+                            await new Promise((resolve, reject) => {
+                                const tx = db.transaction('files', 'readwrite');
+                                const store = tx.objectStore('files');
+                                existing.forEach(f => store.delete(f.id));
+                                for (const f of backupData.uploadedFiles) {
+                                    if (!f || !f.dataUrl) continue;
+                                    const parts = String(f.dataUrl).split(',');
+                                    const match = parts[0].match(/data:([^;]+);base64/i);
+                                    const mime = f.type || (match && match[1]) || 'application/octet-stream';
+                                    const raw = atob(parts[1] || '');
+                                    const bytes = new Uint8Array(raw.length);
+                                    for (let i = 0; i < raw.length; i++) bytes[i] = raw.charCodeAt(i);
+                                    const blob = new Blob([bytes], {type: mime});
+                                    store.add({name:f.name || 'file', type:mime, size:blob.size, lastModified:f.lastModified || Date.now(), blob, addedAt:f.addedAt || Date.now(), folder:f.folder || ''});
+                                }
+                                tx.oncomplete = resolve;
+                                tx.onerror = () => reject(tx.error);
+                            });
+                        }
+                        populateUnitDropdowns();
+                        renderAdminTables();
+                        renderDataFolderControls();
+                        await refreshDataFiles();
+                        alert(`DEMS Backup Restore भयो।`);
+                    }
+                } catch (err) {
+                    alert("Import असफल भयो।");
+                }
+                fileInput.value = '';
+            };
+            fileReader.readAsText(fileInput.files[0]);
+        }
+
+        function openAboutModal(){document.getElementById('aboutModal').style.display='flex';}
+        function closeAboutModal(){document.getElementById('aboutModal').style.display='none';}
+        let editingTaskNoteId = null;
+        function openNamerolModal(){ renderNamerolReport(); document.getElementById('namerolModal').style.display='flex'; }
+        function closeNamerolModal(){ document.getElementById('namerolModal').style.display='none'; }
+        function nepaliDigitsToNumber(v){ const map={'०':'0','१':'1','२':'2','३':'3','४':'4','५':'5','६':'6','७':'7','८':'8','९':'9'}; return Number(String(v||'').replace(/[०-९]/g,c=>map[c]).replace(/[^0-9.-]/g,'')) || 0; }
+        function toNepaliDigits(v){return String(v??'').replace(/[0-9]/g,c=>'०१२३४५६७८९'[Number(c)]);}
+        function getNamerolFilteredEmployees(){
+          const boxes=[1,2,3,4].map(i=>(document.getElementById('searchBox'+i)?.value||'').trim().toLowerCase());
+          const digitsToEnglish=v=>toEnglishNum(String(v??'')).toLowerCase();
+          return getActiveUnitEmployees().filter(e=>{
+            const fields=[e.number,e.rank,e.name,e.trade,e.level,e.darbandi,e.mobile,e.note,e.remark].map(v=>String(v??'').toLowerCase());
+            const englishFields=[e.number,e.mobile].map(digitsToEnglish);
+            return boxes.every(q=>!q || fields.some(f=>f.includes(q)) || englishFields.some(f=>f.includes(digitsToEnglish(q))));
+          });
+        }
+        function renderNamerolReport(){
+          const rankOrder=['प्रा.प्र.से.','प्रा.सेनानी','प्रा.सह.से.','प्रा.उ.से.','प्रा.सु.','प्रा.जम.','ले.जम.','प्रा.हु.','प्रा.अम.','अन्य','ब.का.सि.'];
+          const rows=getNamerolFilteredEmployees().slice().sort((a,b)=>{let ar=rankOrder.indexOf(a.rank),br=rankOrder.indexOf(b.rank);if(ar<0)ar=999;if(br<0)br=999;return ar-br || nepaliDigitsToNumber(a.number)-nepaliDigitsToNumber(b.number) || String(a.name||'').localeCompare(String(b.name||''),'ne');});
+          const tb=document.querySelector('#namerolReportTable tbody'); tb.innerHTML='';
+          rows.forEach((e,i)=>{
+            const tr=document.createElement('tr');
+            [i+1,e.number||'',e.rank||'',e.name||'',e.trade||'',e.level||''].forEach(v=>{
+              const td=document.createElement('td');
+              td.textContent=(typeof v==='number'||/^[0-9०-९+()\- .]+$/.test(String(v)) && /[0-9०-९]/.test(String(v)))?toNepaliDigits(v):v;
+              td.style.cssText='border:1px solid #aaa;padding:5px;text-align:'+(v===e.name?'left':'center')+';';tr.appendChild(td);
+            });
+            const assignTd=document.createElement('td'); assignTd.style.cssText='border:1px solid #aaa;padding:5px;text-align:center;'; assignTd.textContent=(e.darbandi==='अट्याच')?'अट्याच':'दरबन्दि'; tr.appendChild(assignTd);
+            const td=document.createElement('td'); td.textContent=toNepaliDigits(e.mobile||''); td.style.cssText='border:1px solid #aaa;padding:5px;text-align:center;'; tr.appendChild(td);
+            tb.appendChild(tr);
+          });
+          const count=document.getElementById('namerolFilteredCount'); if(count) count.textContent='जम्मा: '+toNepaliDigits(rows.length)+' जना'+(boxesHasSearch()? ' (Search अनुसार)':'');
+        }
+        function boxesHasSearch(){return [1,2,3,4].some(i=>(document.getElementById('searchBox'+i)?.value||'').trim()!=='');}
+        function graphDateLabelNepali(adDate){
+          try { const parts=String(adDate||'').split('-').map(Number); if(parts.length===3){ const bs=graphAdToBs(new Date(parts[0],parts[1]-1,parts[2],12)); if(bs) return toNepaliNum(bs.year)+'/'+toNepaliNum(String(bs.month).padStart(2,'0'))+'/'+toNepaliNum(String(bs.day).padStart(2,'0')); } } catch(e){}
+          return toNepaliNum(String(adDate||''));
+        }
+        function getCurrentNepaliDateText(){
+          try {
+            const now = new Date();
+            const ad = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 0);
+            let bs = null;
+            if (window.NepaliPatro && typeof NepaliPatro.convertADToBS === 'function') {
+              const r = NepaliPatro.convertADToBS(ad);
+              if (r && Number(r.year) && Number(r.month) && Number(r.day)) bs = {year:Number(r.year), month:Number(r.month), day:Number(r.day)};
+            }
+            if (!bs && window.NepaliDate && typeof NepaliDate.adToBs === 'function') {
+              const r = NepaliDate.adToBs(ad.getFullYear(), ad.getMonth()+1, ad.getDate());
+              const f = r && r.bs && r.bs.formatted;
+              if (f) { const a=f.split('-').map(Number); if(a.length===3 && a.every(Number.isFinite)) bs={year:a[0],month:a[1],day:a[2]}; }
+            }
+            return (bs ? toNepaliNum(bs.year)+'/'+toNepaliNum(String(bs.month).padStart(2,'0'))+'/'+toNepaliNum(String(bs.day).padStart(2,'0')) : 'नेपाली मिति उपलब्ध भएन') + ' गते ।';
+          } catch(e) { return 'नेपाली मिति उपलब्ध भएन गते ।'; }
+        }
+        function updateReportPrintDates(){const dateText=getCurrentNepaliDateText();document.querySelectorAll('.date-line').forEach(el=>{el.textContent=dateText;el.style.display='inline';el.style.width='auto';el.style.marginLeft='2px';});const main=document.getElementById('printMainDate');if(main)main.textContent=dateText;}
+        function printNamerol(){const table=document.getElementById('namerolReportTable').outerHTML;const w=window.open('','_blank');if(!w){alert('Please allow pop-ups to print.');return;}const unitName=(currentActiveUser&&currentActiveUser.unit)||'';w.document.write('<html><head><title></title><meta charset="utf-8"><style>@page{margin:0}html,body{margin:0;padding:0}body{font-family:Arial,sans-serif;padding:12mm;box-sizing:border-box}h2{font-size:18px;margin:0 0 10px;text-align:center}table{border-collapse:collapse;width:100%}th,td{border:1px solid #555;padding:5px;text-align:center}td:nth-child(4){text-align:left}th{background:#ddd}</style></head><body><h2>'+unitName+'</h2><div style="text-align:right;font-weight:bold;margin-bottom:8px">मिति: '+getCurrentNepaliDateText()+'</div>'+table+'</body></html>');w.document.close();w.focus();w.print();}
+        function exportNamerol(){const t=document.getElementById('namerolReportTable');const csv='\uFEFF'+Array.from(t.rows).map(r=>Array.from(r.cells).map(c=>'"'+c.innerText.replace(/"/g,'""')+'"').join(',')).join('\r\n');demsSaveFile('सिनियरिटी_नामेरोल_'+(currentActiveUser.unit||'Unit')+'.csv', csv, 'text/csv');}
+        function taskNotesKey(){return 'DEMS_TASK_NOTES_'+((currentActiveUser&&currentActiveUser.unit)||'default');}
+        function readTaskNotes(){try{return JSON.parse(localStorage.getItem(taskNotesKey())||'[]')}catch(e){return []}}
+        function writeTaskNotes(a){localStorage.setItem(taskNotesKey(),JSON.stringify(a));}
+
+        function openAttendanceReport(){
+          const unit=(currentActiveUser&&currentActiveUser.unit)||'युनिट';
+          document.getElementById('attendanceUnitName').textContent=unit;
+          const unitEdit=document.getElementById('attendanceUnitNameEdit'); if(unitEdit) unitEdit.value=unit;
+          const docHeading=document.getElementById('attendanceDocUnitHeading'); if(docHeading) docHeading.textContent=unit;
+          if(typeof showAttendancePanel==='function') showAttendancePanel('report');
+          const logo=document.getElementById('userSidebarLogoImg');
+          if(logo && logo.src) document.getElementById('attendanceUnitLogo').src=logo.src;
+          const date=getCurrentNepaliDateText();
+          document.getElementById('attendanceNepaliDate').value=date;
+          document.getElementById('attendanceDocDate').textContent='मिति: '+date;
+          document.getElementById('attendanceReportModal').style.display='flex';
+        }
+        function closeAttendanceReport(){document.getElementById('attendanceReportModal').style.display='none';}
+        function saveAttendanceWord(){
+          const name=(prompt('Word फाइलको नाम दिनुहोस्:','हाजिर प्रतिवेदन')||'').trim(); if(!name)return;
+          const body=document.getElementById('attendanceWordEditor').innerHTML;
+          const unit=document.getElementById('attendanceUnitName').textContent;
+          const doc='<!DOCTYPE html><html><head><meta charset="UTF-8"><style>body{font-family:Kalimati, Mangal, serif}table{border-collapse:collapse;width:100%}td,th{border:1px solid #333;padding:6px}</style></head><body><h3 style="text-align:center">'+unit+'</h3>'+body+'</body></html>';
+          downloadAttendanceFile(name.replace(/\.docx?$/i,'')+'.doc',doc,'application/msword');
+        }
+        function openAttendanceExcel(){
+          document.getElementById('attendanceWordPanel').style.display='none';
+          document.getElementById('attendanceExcelPanel').style.display='block';
+          document.getElementById('attendanceExcelName').value='हाजिर प्रतिवेदन';
+        }
+        function backAttendanceWord(){document.getElementById('attendanceExcelPanel').style.display='none';document.getElementById('attendanceWordPanel').style.display='block';}
+        function addAttendanceExcelRow(){
+          const t=document.getElementById('attendanceExcelTable'), r=t.tBodies[0].insertRow();
+          for(let i=0;i<t.tHead.rows[0].cells.length;i++){const c=r.insertCell();c.textContent=i===0?String(t.tBodies[0].rows.length):'';}
+        }
+        function addAttendanceExcelColumn(){
+          const t=document.getElementById('attendanceExcelTable'); const n=prompt('नयाँ column को heading लेख्नुहोस्:','नयाँ शीर्षक');if(!n)return;
+          const h=document.createElement('th');h.textContent=n;t.tHead.rows[0].appendChild(h);
+          Array.from(t.tBodies[0].rows).forEach(r=>r.insertCell());
+        }
+        function saveAttendanceExcel(){
+          const raw=(document.getElementById('attendanceExcelName').value||'हाजिर प्रतिवेदन').trim();
+          const name=(prompt('Excel फाइलको नाम दिनुहोस्:',raw)||'').trim();if(!name)return;
+          const unit=document.getElementById('attendanceUnitName').textContent;
+          const htmlTable='<html><head><meta charset="UTF-8"></head><body><h2>'+unit+'</h2><p>मिति: '+document.getElementById('attendanceNepaliDate').value+'</p>'+document.getElementById('attendanceExcelTable').outerHTML+'</body></html>';
+          downloadAttendanceFile(name.replace(/\.xls[x]?$/i,'')+'.xls',htmlTable,'application/vnd.ms-excel');
+        }
+        function downloadAttendanceFile(filename,content,type){
+          const blob=new Blob(['\ufeff',content],{type:type+';charset=utf-8'});const a=document.createElement('a');
+          a.href=URL.createObjectURL(blob);a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+        }
+
+        function openNotesModal(){renderTaskNotes();document.getElementById('notesModal').style.display='flex';}
+        function closeNotesModal(){document.getElementById('notesModal').style.display='none';}
+        function clearTaskNoteForm(){editingTaskNoteId=null;document.getElementById('taskNoteTitle').value='';document.getElementById('taskNoteDate').value='';document.getElementById('taskNoteText').value='';}
+        function saveTaskNote(){const title=document.getElementById('taskNoteTitle').value.trim(),date=document.getElementById('taskNoteDate').value.trim(),text=document.getElementById('taskNoteText').value.trim();if(!title&&!text){alert('Please enter a title or note.');return;}const arr=readTaskNotes();if(editingTaskNoteId!==null){const n=arr.find(x=>x.id===editingTaskNoteId);if(n){n.title=title;n.text=text;n.date=date;delete n.updated;}}else{arr.unshift({id:Date.now(),title,text,date});}writeTaskNotes(arr);clearTaskNoteForm();renderTaskNotes();}
+        function renderTaskNotes(){const tb=document.querySelector('#taskNotesTable tbody');if(!tb)return;tb.innerHTML='';readTaskNotes().forEach((n,i)=>{const tr=document.createElement('tr');[i+1,n.title,n.text,n.date||n.updated||''].forEach(v=>{const td=document.createElement('td');td.textContent=v||'';td.style.cssText='border:1px solid #aaa;padding:6px;white-space:pre-wrap;';tr.appendChild(td)});const td=document.createElement('td');td.style.cssText='border:1px solid #aaa;padding:5px;white-space:nowrap;';const eb=document.createElement('button');eb.className='btn-blue';eb.textContent='Edit';eb.onclick=()=>{editingTaskNoteId=n.id;document.getElementById('taskNoteTitle').value=n.title||'';document.getElementById('taskNoteDate').value=n.date||n.updated||'';document.getElementById('taskNoteText').value=n.text||'';};const db=document.createElement('button');db.className='btn-red';db.textContent='Delete';db.onclick=()=>{if(confirm('Delete this task/order note?')){writeTaskNotes(readTaskNotes().filter(x=>x.id!==n.id));renderTaskNotes();if(editingTaskNoteId===n.id)clearTaskNoteForm();}};td.append(eb,db);tr.appendChild(td);tb.appendChild(tr)});}
     </script>
 
-<!-- ... तपाईंको पुरानो कोडमा भएको Data Manager, Attendance Report Modal, आदि ... -->
+<script id="demsLandscapeScrollHelper">
+(function () {
+    function shortLandscape() {
+        try { return window.matchMedia('(orientation: landscape) and (max-height: 640px)').matches; }
+        catch (e) { return false; }
+    }
+    function centerInView(el) {
+        if (!el || !el.isConnected) return;
+        try { el.scrollIntoView({ block: 'center', inline: 'nearest', behavior: 'smooth' }); }
+        catch (e) { try { el.scrollIntoView(); } catch (ignored) {} }
+    }
+    document.addEventListener('focusin', function (ev) {
+        var el = ev.target;
+        if (!el || !el.tagName) return;
+        var tag = el.tagName.toUpperCase();
+        if (tag !== 'INPUT' && tag !== 'SELECT' && tag !== 'TEXTAREA') return;
+        if (!shortLandscape()) return;
+        setTimeout(function () { centerInView(el); }, 350);
+        setTimeout(function () { centerInView(el); }, 800);
+    }, true);
+
+    var originalToggle = window.toggleSidebar;
+    if (typeof originalToggle === 'function') {
+        window.toggleSidebar = function () {
+            var r = originalToggle.apply(this, arguments);
+            if (shortLandscape()) {
+                setTimeout(function () {
+                    var open = document.querySelector('.sidebar.sidebar-open');
+                    if (!open) return;
+                    var box = open.getBoundingClientRect();
+                    try {
+                        window.scrollTo({ top: Math.max(0, window.pageYOffset + box.top - 6), behavior: 'smooth' });
+                    } catch (e) { window.scrollTo(0, Math.max(0, window.pageYOffset + box.top - 6)); }
+                }, 120);
+            }
+            return r;
+        };
+    }
+})();
+</script>
+
+<!-- Attendance Report / Word / Excel modal -->
+<style>
+#attendanceReportModal{display:none;position:fixed;inset:0;z-index:20000;background:rgba(0,0,0,.65);align-items:center;justify-content:center;padding:12px;box-sizing:border-box}
+#attendanceReportModal .attendance-dialog{background:#fff;width:min(1100px,98vw);height:min(92vh,900px);overflow:auto;border-radius:8px;padding:16px;box-sizing:border-box;color:#111}
+#attendanceReportModal .attendance-toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+#attendanceReportModal button{cursor:pointer;padding:7px 12px;border:0;border-radius:4px;background:#3159a8;color:#fff}
+#attendanceReportModal input{padding:7px;max-width:100%}
+#attendanceReportModal table{border-collapse:collapse;width:100%;margin-top:12px}
+#attendanceReportModal th,#attendanceReportModal td{border:1px solid #333;padding:7px;min-width:55px}
+#attendanceReportModal th{background:#eee}
+#attendanceWordEditor{min-height:380px;border:1px solid #aaa;padding:18px;outline:none;overflow:auto}
+#attendanceUnitLogo{max-width:90px;max-height:90px;object-fit:contain}
+</style>
+<div id="attendanceReportModal" role="dialog" aria-modal="true" aria-label="हाजिर प्रतिवेदन">
+ <div class="attendance-dialog">
+  <div class="attendance-toolbar">
+   <strong style="font-size:20px;margin-right:auto">हाजिर प्रतिवेदन</strong>
+   <button onclick="showAttendancePanel('report')">हाजिर प्रतिवेदन</button>
+   <button onclick="showAttendancePanel('word')">Word</button>
+   <button onclick="showAttendancePanel('excel')">Excel</button>
+   <button onclick="closeAttendanceReport()" style="background:#b3261e">Close ✕</button>
+  </div>
+  <section id="attendanceReportPanel">
+   <div style="display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;text-align:center;margin:10px 0 18px">
+    <img id="attendanceUnitLogo" src="Logo.gif" alt="Unit Logo" onerror="this.style.display='none'">
+    <div><h2 id="attendanceUnitName" style="margin:0 0 10px">युनिटको नाम</h2><h3 style="margin:0">हाजिर प्रतिवेदन</h3><p id="attendanceDocDate" style="margin:8px 0 0">मिति:</p></div>
+   </div>
+   <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px"><label>युनिटको नाम: <input id="attendanceUnitNameEdit" placeholder="युनिटको नाम लेख्नुहोस्" oninput="syncAttendanceUnitName(this.value)"></label><label>मिति: <input id="attendanceNepaliDate" style="min-width:220px"></label><label>लोगो: <input type="file" accept="image/*" onchange="loadAttendanceLogo(event)"></label></div>
+   <div id="attendanceReportManual" contenteditable="true" style="border:1px solid #aaa;min-height:180px;padding:12px;line-height:1.8"><p>श्री ............................................................. को खडा हाजिर ।</p><p>तल उल्लेखित विवरणअनुसार हाजिर प्रतिवेदन पेश गरिएको छ ।</p><table><thead><tr><th>क्र.सं.</th><th>आसामी</th><th>अधिकृत</th><th>पदिक</th><th>अन्तर्गत</th><th>जम्मा</th></tr></thead><tbody><tr><td contenteditable="true">१</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr></tbody></table></div>
+   <div class="attendance-toolbar" style="margin-top:12px"><button onclick="showAttendancePanel('word')">Word मा खोल्नुहोस्</button><button onclick="showAttendancePanel('excel')">Excel मा खोल्नुहोस्</button><button onclick="saveAttendanceReportHTML()">प्रतिवेदन HTML मा सेभ</button></div>
+  </section>
+  <section id="attendanceWordPanel" style="display:none">
+   <h2>Word</h2><p>तलको क्षेत्रमा Word-जस्तै सम्पादन गर्नुहोस्। फाइल आफ्नो नाममा सेभ गर्नुहोस्।</p>
+   <div class="attendance-toolbar"><button onclick="document.execCommand('bold')"><b>B</b></button><button onclick="document.execCommand('italic')"><i>I</i></button><button onclick="document.execCommand('underline')"><u>U</u></button><button onclick="document.execCommand('insertUnorderedList')">• सूची</button><button onclick="document.execCommand('insertOrderedList')">१. सूची</button><button onclick="saveAttendanceWord()">Word फाइल सेभ</button></div>
+   <div id="attendanceWordEditor" contenteditable="true"></div>
+  </section>
+  <section id="attendanceExcelPanel" style="display:none">
+   <h2>Excel</h2><p>कोष्ठमा क्लिक गरेर विवरण लेख्नुहोस्। Row/Column थपेर Excel फाइल सेभ गर्नुहोस्।</p>
+   <div class="attendance-toolbar"><label>फाइलको नाम: <input id="attendanceExcelName" value="हाजिर प्रतिवेदन"></label><button onclick="addAttendanceExcelRow()">+ Row</button><button onclick="addAttendanceExcelColumn()">+ Column</button><button onclick="saveAttendanceExcel()">Excel फाइल सेभ</button></div>
+   <table id="attendanceExcelTable"><thead><tr><th contenteditable="true">क्र.सं.</th><th contenteditable="true">आसामी</th><th contenteditable="true">अधिकृत</th><th contenteditable="true">पदिक</th><th contenteditable="true">अन्तर्गत</th><th contenteditable="true">जम्मा</th></tr></thead><tbody><tr><td contenteditable="true">१</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr></tbody></table>
+   <div class="attendance-toolbar" style="margin-top:12px"><button onclick="showAttendancePanel('report')">प्रतिवेदनमा फर्कनुहोस्</button></div>
+  </section>
+ </div>
+</div>
+
+<div id="dataManagerModal" class="modal" style="display:none;z-index:5000;padding:14px;">
+ <div class="modal-content" style="max-width:1050px;width:96%;max-height:90vh;overflow:auto;background:#fff;padding:18px;border-radius:8px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;border-bottom:1px solid #ddd;padding-bottom:10px;margin-bottom:12px;">
+   <h2 style="margin:0">Data</h2><button class="btn-red" onclick="closeDataManager()">Close</button>
+  </div>
+  <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;">
+   <button class="btn-blue" onclick="createDataFolder()">+ New Folder</button>
+   <button class="btn-blue" id="dataBackButton" onclick="goDataMainFolder()" style="display:none">← Back to folders</button>
+   <strong id="dataCurrentFolderLabel">Main Folder</strong>
+   <input id="dataFilePicker" type="file" multiple accept=".doc,.docx,.xls,.xlsx,.ppt,.pptx,.pdf,.txt,.csv,.odt,.ods,.odp,.rtf,.html,.jpg,.jpeg,.png,.gif" style="max-width:100%">
+   <button class="btn-green" onclick="uploadDataFiles()">Upload / Save</button>
+   <input id="dataSearchBox" type="search" placeholder="Search file name..." oninput="renderDataFiles()" style="flex:1;min-width:200px;padding:8px">
+   <button class="btn-blue" onclick="refreshDataFiles()">Refresh</button>
+  </div>
+  <div id="dataFoldersList" style="display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px"></div>
+  <div style="overflow:auto"><table style="width:100%;border-collapse:collapse" id="dataFilesTable"><thead><tr style="background:#eee"><th style="border:1px solid #ccc;padding:8px">File name</th><th style="border:1px solid #ccc;padding:8px">Size</th><th style="border:1px solid #ccc;padding:8px">Actions</th></tr></thead><tbody id="dataFilesBody"><tr><td colspan="3" style="padding:12px;text-align:center">Loading files...</td></tr></tbody></table></div>
+ </div>
+</div>
+
+<script>
+function showAttendancePanel(which){
+ const ids={report:'attendanceReportPanel',word:'attendanceWordPanel',excel:'attendanceExcelPanel'};
+ Object.keys(ids).forEach(k=>{const e=document.getElementById(ids[k]);if(e)e.style.display=(k===which?'block':'none');});
+ if(which==='word'){const ed=document.getElementById('attendanceWordEditor');if(ed&&!ed.innerHTML.trim())ed.innerHTML=document.getElementById('attendanceReportManual').innerHTML;}
+ if(which==='excel'){const t=document.getElementById('attendanceExcelTable');if(t&&t.dataset.initialized!=='1'){const src=document.querySelector('#attendanceReportManual table');if(src)t.innerHTML=src.innerHTML;t.dataset.initialized='1';}}
+}
+function openAttendanceWordDirect(){openAttendanceReport();showAttendancePanel('word');}
+function openAttendanceExcelDirect(){openAttendanceReport();showAttendancePanel('excel');}
+function syncAttendanceUnitName(v){document.getElementById('attendanceUnitName').textContent=v||'युनिटको नाम';document.getElementById('attendanceDocUnitHeading')?.replaceChildren(document.createTextNode(v||''));}
+function loadAttendanceLogo(e){const f=e.target.files&&e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{document.getElementById('attendanceUnitLogo').src=r.result;};r.readAsDataURL(f);}
+function saveAttendanceReportHTML(){const name=(prompt('फाइलको नाम दिनुहोस्:','हाजिर प्रतिवेदन')||'').trim();if(!name)return;const html='<!doctype html><html><head><meta charset="utf-8"><title>हाजिर प्रतिवेदन</title></head><body>'+document.getElementById('attendanceReportPanel').innerHTML+'</body></html>';downloadAttendanceFile(name.replace(/\.html?$/i,'')+'.html',html,'text/html');}
+
+const DATA_DB_NAME='DEMS_Data_Files_v1';
+const DATA_FOLDERS_KEY='DEMS_Data_Folders_v1';
+let dataDbPromise=null;
+function getDataFolders(){try{return JSON.parse(localStorage.getItem(DATA_FOLDERS_KEY)||'[]').filter(x=>typeof x==='string')}catch(e){return []}}
+function saveDataFolders(folders){localStorage.setItem(DATA_FOLDERS_KEY,JSON.stringify([...new Set(folders)].sort((a,b)=>a.localeCompare(b))));}
+let currentDataFolder='';
+function renderDataFolderControls(){
+ const folders=getDataFolders(), list=document.getElementById('dataFoldersList'); if(!list)return;
+ const label=document.getElementById('dataCurrentFolderLabel'), back=document.getElementById('dataBackButton');
+ if(label)label.textContent=currentDataFolder||'Main Folder';
+ if(back)back.style.display=currentDataFolder?'inline-block':'none';
+ list.style.display=currentDataFolder?'none':'flex';
+ list.replaceChildren();
+ folders.forEach(name=>{
+  const tile=document.createElement('button');tile.type='button';tile.className='btn-blue data-folder-tile';tile.textContent='📁 '+name;tile.title='Double-click to open; right-click for options';
+  tile.addEventListener('dblclick',()=>openDataFolder(name));
+  tile.addEventListener('contextmenu',ev=>showDataFolderContext(ev,name));
+  list.appendChild(tile);
+ });
+}
+let dataFolderClipboard='';
+function showDataFolderContext(ev,name){
+ ev.preventDefault();document.querySelectorAll('.data-folder-context').forEach(x=>x.remove());
+ const m=document.createElement('div');m.className='data-folder-context';m.style.cssText='position:fixed;z-index:999999;left:'+Math.min(ev.clientX,window.innerWidth-190)+'px;top:'+Math.min(ev.clientY,window.innerHeight-150)+'px;background:#fff;border:1px solid #888;box-shadow:0 3px 12px #0003;border-radius:6px;padding:5px;min-width:160px';
+ const add=(label,fn)=>{const b=document.createElement('button');b.type='button';b.textContent=label;b.style.cssText='display:block;width:100%;text-align:left;padding:8px;border:0;background:#fff;cursor:pointer';b.onclick=()=>{m.remove();fn()};m.appendChild(b)};
+ add('📂 Open folder',()=>openDataFolder(name));add('📋 Copy folder',()=>{dataFolderClipboard=name;alert('Folder copy भयो। खाली ठाउँमा right-click गरेर Paste Folder गर्नुहोस्।')});add('🗑 Delete folder',()=>{setTimeout(()=>deleteDataFolder(name),0)});
+ document.body.appendChild(m);setTimeout(()=>{const close=e=>{if(!m.contains(e.target)){m.remove();document.removeEventListener('click',close,true)}};document.addEventListener('click',close,true)},0);
+}
+async function pasteCopiedDataFolder(){
+ if(!dataFolderClipboard)return;const source=dataFolderClipboard;const name=(prompt('Copied folder को नयाँ नाम लेख्नुहोस्:',source+' - Copy')||'').trim();if(!name)return;
+ if(/[\/]/.test(name)){alert('Folder को नाममा / वा \ राख्न मिल्दैन।');return;}
+ if(getDataFolders().some(f=>f.toLowerCase()===name.toLowerCase())){alert('यो नामको Folder पहिले नै छ।');return;}
+ try{const records=await getDataFileRecords(),db=await openDataDb();for(const f of records.filter(x=>(x.folder||'')===source)){await new Promise((resolve,reject)=>{const tx=db.transaction('files','readwrite');const copy={...f,folder:name,addedAt:Date.now()};delete copy.id;tx.objectStore('files').add(copy);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error)});}saveDataFolders([...getDataFolders(),name]);dataFolderClipboard='';renderDataFolderControls();await renderDataFiles();alert('Folder र यसभित्रका फाइलहरूको copy भयो।');}catch(e){alert('Copy/Paste असफल भयो: '+(e.message||e));}
+}
+document.addEventListener('contextmenu',function(e){if(e.target.closest('#dataFoldersList')&&!e.target.closest('.data-folder-tile')&&dataFolderClipboard){e.preventDefault();document.querySelectorAll('.data-folder-context').forEach(x=>x.remove());const m=document.createElement('div');m.className='data-folder-context';m.style.cssText='position:fixed;z-index:999999;left:'+Math.min(e.clientX,window.innerWidth-190)+'px;top:'+Math.min(e.clientY,window.innerHeight-80)+'px;background:#fff;border:1px solid #888;border-radius:6px;padding:5px';const b=document.createElement('button');b.textContent='📥 Paste folder';b.onclick=()=>{m.remove();pasteCopiedDataFolder()};m.appendChild(b);document.body.appendChild(m)}});
+function openDataFolder(name){if(!getDataFolders().includes(name)){alert('Folder फेला परेन।');return;}currentDataFolder=name;renderDataFolderControls();const q=document.getElementById('dataSearchBox');if(q)q.value='';renderDataFiles();}
+function goDataMainFolder(){currentDataFolder='';renderDataFolderControls();renderDataFiles();}
+function selectDataFolderByIndex(i){const folders=getDataFolders();if(folders[i]!==undefined)openDataFolder(folders[i]);}
+async function deleteDataFolder(name){
+ try{
+  const folders=getDataFolders();
+  if(!name || !folders.some(f=>f===name)){alert('यो Folder फेला परेन। Refresh गरेर फेरि प्रयास गर्नुहोस्।');return;}
+  if(!confirm('“'+name+'” Folder र यसभित्र रहेका सबै फाइलहरू हटाउने?'))return;
+  const db=await openDataDb();
+  await new Promise((resolve,reject)=>{
+   const tx=db.transaction('files','readwrite'),store=tx.objectStore('files'),req=store.openCursor();
+   req.onsuccess=()=>{const cursor=req.result;if(!cursor)return;if((cursor.value.folder||'')===name)cursor.delete();cursor.continue();};
+   tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error||new Error('Delete transaction failed'));tx.onabort=()=>reject(tx.error||new Error('Delete transaction aborted'));
+  });
+  saveDataFolders(folders.filter(f=>f!==name));
+  if(currentDataFolder===name)currentDataFolder='';
+  renderDataFolderControls();await renderDataFiles();
+  alert('Folder हटाइयो।');
+ }catch(e){console.error(e);alert('Folder हटाउन सकिएन: '+(e.message||e));}
+}
+function createDataFolder(){const name=(prompt('नयाँ Folder को नाम लेख्नुहोस्:')||'').trim();if(!name)return;if(/[\\/]/.test(name)){alert('Folder को नाममा / वा \\ राख्न मिल्दैन।');return;}const folders=getDataFolders();if(folders.some(f=>f.toLowerCase()===name.toLowerCase())){alert('यो Folder पहिले नै छ।');return;}folders.push(name);saveDataFolders(folders);currentDataFolder='';renderDataFolderControls();renderDataFiles();}
+
+function openDataDb(){
+ if(!('indexedDB' in window)) return Promise.reject(new Error('यो ब्राउजरमा स्थानीय file storage उपलब्ध छैन।'));
+ if(!dataDbPromise)dataDbPromise=new Promise((resolve,reject)=>{const req=indexedDB.open(DATA_DB_NAME,1);req.onupgradeneeded=()=>{const db=req.result;if(!db.objectStoreNames.contains('files'))db.createObjectStore('files',{keyPath:'id',autoIncrement:true});};req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error||new Error('Database open failed'));});
+ return dataDbPromise;
+}
+function openDataManager(){const m=document.getElementById('dataManagerModal');if(m)m.style.display='flex';currentDataFolder='';renderDataFolderControls();refreshDataFiles();}
+function closeDataManager(){const m=document.getElementById('dataManagerModal');if(m)m.style.display='none';}
+async function uploadDataFiles(){
+ const input=document.getElementById('dataFilePicker'), files=Array.from(input.files||[]), folder=currentDataFolder;if(!files.length){alert('पहिले अपलोड गर्न फाइल छान्नुहोस्।');return;}
+ try{const db=await openDataDb();for(const file of files){await new Promise((resolve,reject)=>{const tx=db.transaction('files','readwrite');tx.objectStore('files').add({name:file.name,type:file.type||'application/octet-stream',size:file.size,lastModified:file.lastModified||Date.now(),blob:file,addedAt:Date.now(),folder});tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});}input.value='';await refreshDataFiles();alert(files.length+' file(s) uploaded and saved.');}
+ catch(e){console.error(e);alert('फाइल सेभ हुन सकेन: '+(e.message||e));}
+}
+async function getDataFileRecords(){const db=await openDataDb();return await new Promise((resolve,reject)=>{const tx=db.transaction('files','readonly'),req=tx.objectStore('files').getAll();req.onsuccess=()=>resolve(req.result||[]);req.onerror=()=>reject(req.error);});}
+function formatDataFileSize(n){if(n<1024)return n+' B';if(n<1024*1024)return (n/1024).toFixed(1)+' KB';return (n/1024/1024).toFixed(2)+' MB';}
+function escapeDataHtml(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+async function renderDataFiles(){
+ const body=document.getElementById('dataFilesBody');if(!body)return;const q=(document.getElementById('dataSearchBox')?.value||'').trim().toLowerCase();
+ try{const files=await getDataFileRecords();const folder=currentDataFolder;const filtered=files.filter(f=>(q ? f.name.toLowerCase().includes(q) : (f.folder||'')===folder)).sort((a,b)=>b.addedAt-a.addedAt);
+ if(!filtered.length){body.innerHTML='<tr><td colspan="3" style="padding:14px;text-align:center">'+(q?'No matching files found.':'No files uploaded yet.')+'</td></tr>';return;}
+ body.innerHTML=filtered.map(f=>'<tr><td style="border:1px solid #ccc;padding:8px;word-break:break-word"><button type="button" onclick="downloadStoredDataFile('+f.id+')" style="border:0;background:none;color:#0645ad;text-decoration:underline;cursor:pointer;font:inherit;text-align:left;padding:0;word-break:break-word" title="Click to download">'+escapeDataHtml(f.name)+'</button></td><td style="border:1px solid #ccc;padding:8px;white-space:nowrap">'+formatDataFileSize(f.size||0)+'</td><td style="border:1px solid #ccc;padding:8px;white-space:nowrap"><button class="btn-red" onclick="deleteStoredDataFile('+f.id+')">Delete</button></td></tr>').join('');
+ }catch(e){body.innerHTML='<tr><td colspan="3" style="padding:12px">File storage error: '+escapeDataHtml(e.message||e)+'</td></tr>';}
+}
+async function refreshDataFiles(){await renderDataFiles();}
+async function findStoredDataFile(id){const files=await getDataFileRecords();return files.find(f=>Number(f.id)===Number(id));}
+async function downloadStoredDataFile(id){try{const f=await findStoredDataFile(id);if(!f)return alert('File not found.');const url=URL.createObjectURL(f.blob);const a=document.createElement('a');a.href=url;a.download=f.name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);}catch(e){alert('Download failed: '+(e.message||e));}}
+async function openStoredDataFile(id){try{const f=await findStoredDataFile(id);if(!f)return alert('File not found.');const url=URL.createObjectURL(f.blob);const w=window.open(url,'_blank');if(!w){const a=document.createElement('a');a.href=url;a.download=f.name;a.click();}setTimeout(()=>URL.revokeObjectURL(url),120000);}catch(e){alert('Open failed: '+(e.message||e));}}
+async function deleteStoredDataFile(id){if(!confirm('यो फाइल हटाउने?'))return;try{const db=await openDataDb();await new Promise((resolve,reject)=>{const tx=db.transaction('files','readwrite');tx.objectStore('files').delete(Number(id));tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});await renderDataFiles();}catch(e){alert('Delete failed: '+(e.message||e));}}
+
+</script>
+
 </body>
 </html>
